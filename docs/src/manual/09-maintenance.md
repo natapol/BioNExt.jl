@@ -6,7 +6,7 @@ adding properties, classes and file formats, and running the tests.
 ## Project layout
 
 ```
-BioNExt/
+BioNExt.jl/
 ├── Project.toml               package metadata (depends only on Dates)
 ├── src/
 │   ├── BioNExt.jl             module: includes and exports
@@ -64,7 +64,7 @@ those tests, with a message, unless Graphs.jl can be loaded.
 julia --project=. -e 'using Pkg; Pkg.test()'
 ```
 
-The companion package BioNExtSources (a separate repository) uses a few internal functions
+The companion package [BioNExtSources.jl](https://github.com/natapol/BioNExtSources.jl) uses a few internal functions
 (`BioNExt.merge_into!`, `BioNExt.assign!`, `BioNExt.CLASS_TYPES`). Run its tests too after changing them.
 
 ### Keeping the index correct

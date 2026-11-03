@@ -320,6 +320,12 @@ Number of findings (including those not kept because of `max_per_check`)."""
 count_findings(r::AuditReport; check = nothing, severity = nothing) =
     sum((n for ((c, s), n) in r.counts if (check === nothing || c === check) && (severity === nothing || s === severity)); init = 0)
 
+"""
+    QualityError(report, fail_on)
+
+Thrown by `assert_quality` when a graph fails its audit at level `fail_on`. `report` holds
+the full `AuditReport`, and showing the error prints it.
+"""
 struct QualityError <: Exception
     report::AuditReport
     fail_on::Symbol

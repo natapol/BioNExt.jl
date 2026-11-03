@@ -1,8 +1,22 @@
 # BioNExt.jl
 
+[![CI](https://github.com/natapol/BioNExt.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/natapol/BioNExt.jl/actions/workflows/CI.yml)
+
 Build, query, validate and serialize biological knowledge graphs structured by the
 [BioNExt ontology](https://w3id.org/bionext/ontology/) (v1.0.0, namespace `https://w3id.org/bionext/`).
 Only depends on the `Dates` standard library.
+
+## Installation
+
+BioNExt.jl needs Julia 1.10 or newer. It isn't registered yet, so add it from GitHub:
+
+```julia
+using Pkg
+Pkg.add(url = "https://github.com/natapol/BioNExt.jl")
+```
+
+To import data from UniProt, KEGG, IntAct, BioGRID, SIGNOR, Reactome and BioCyc, see the companion
+package [BioNExtSources.jl](https://github.com/natapol/BioNExtSources.jl).
 
 ## Documentation
 

@@ -118,6 +118,13 @@ function duplicates(kg::KnowledgeGraph; use_xrefs::Bool = false, prefix_aliases 
     return sort!([g for g in values(groups) if length(g) > 1]; by = g -> kg.seq[g[1]])
 end
 
+"""
+    keep_first(field, kept, other) -> kept
+
+The default `on_conflict` policy of `resolve!` and `integrate!`: when two merged resources
+disagree on a single-valued field, keep the canonical resource's value. Write your own
+function with the same arguments to choose differently.
+"""
 keep_first(field, kept, other) = kept
 
 # Pick the canonical id of a group: by prefix preference, then insertion order.

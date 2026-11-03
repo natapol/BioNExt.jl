@@ -307,15 +307,11 @@ Two merged resources had different values for a single-valued field. `kept` is t
 
 ### `keep_first`
 
-No documentation found.
-
-`BioNExt.keep_first` is a `Function`.
-
 ```
-# 1 method for generic function "keep_first" from BioNExt:
- [1] keep_first(field, kept, other)
-     @ ~/Projects/bionextjl/BioNExt/src/resolve.jl:121
+keep_first(field, kept, other) -> kept
 ```
+
+The default `on_conflict` policy of `resolve!` and `integrate!`: when two merged resources disagree on a single-valued field, keep the canonical resource's value. Write your own function with the same arguments to choose differently.
 
 
 ## Validation
@@ -525,26 +521,11 @@ Run `audit` (with `kwargs`) and throw a `QualityError` showing the report if it 
 
 ### `QualityError`
 
-No documentation found.
-
-# Summary
-
 ```
-struct QualityError
+QualityError(report, fail_on)
 ```
 
-# Fields
-
-```
-report  :: AuditReport
-fail_on :: Symbol
-```
-
-# Supertype Hierarchy
-
-```
-QualityError <: Exception <: Any
-```
+Thrown by `assert_quality` when a graph fails its audit at level `fail_on`. `report` holds the full `AuditReport`, and showing the error prints it.
 
 
 ## Statistics
