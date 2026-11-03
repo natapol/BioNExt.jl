@@ -1,0 +1,1541 @@
+@prefix bn: <https://w3id.org/bionext/ontology/> .
+@prefix bnr: <https://w3id.org/bionext/resource/> .
+@prefix bp: <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix orth: <http://purl.org/net/orth#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniprot: <http://purl.uniprot.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dct:created a owl:AnnotationProperty .
+
+dct:creator a owl:AnnotationProperty .
+
+dct:issued a owl:AnnotationProperty .
+
+dct:license a owl:AnnotationProperty .
+
+dct:publisher a owl:AnnotationProperty .
+
+bn: a owl:Ontology ;
+    rdfs:label "BioNExt Ontology"@en ;
+    dct:created "2026-07-13"^^xsd:date ;
+    dct:creator <https://orcid.org/0009-0003-1344-2449> ;
+    dct:issued "2026-07-13"^^xsd:date ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:modified "2026-08-06"^^xsd:date ;
+    dct:publisher <https://s3bio.gitlab.io/> ;
+    rdfs:comment """An ontology for representing biological entities, pathway participation, orthologous relationships, evidence, and cross-database integration for yeast and human biological models.
+"""@en ;
+    owl:versionIRI <https://w3id.org/bionext/releases/v1.0.0/bionext.ttl> ;
+    owl:versionInfo "1.0.0" .
+
+bn:Activation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Activation" ;
+    rdfs:comment "A relationship where one entity increases or initiates the activity or function of another (e.g., gene, protein)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/INO_0000024> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:EdgeEntity,
+        bn:NodeEntity ;
+    bn:expectedRight bn:EdgeEntity,
+        bn:NodeEntity,
+        bn:PathwayModule .
+
+bn:AntisenseRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "asRNA" ;
+    rdfs:comment "RNA molecules are commonly noncoding and play regulatory roles through base-pairing interactions or transcriptional interference." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000644> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Apoptosome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "apoptosome" ;
+    rdfs:comment "A multi-protein complex that forms in the cytoplasm during apoptosis and activates initiator caspases to trigger programmed cell death." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0043293> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Association a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Association" ;
+    rdfs:comment "A general relationship where entities are observed together in a context suggesting possible biological linkage." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_0915> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:EdgeEntity,
+        bn:NodeEntity,
+        bn:PathwayModule ;
+    bn:expectedRight bn:EdgeEntity,
+        bn:NodeEntity,
+        bn:PathwayModule .
+
+bn:Autophagosome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "autophagosome" ;
+    rdfs:comment "A double-membrane vesicle that encloses cytoplasmic material and organelles for delivery to lysosomes during autophagy." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005776> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Binding a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Binding" ;
+    rdfs:comment "A physical relationship where two or more entities interact via molecular binding (e.g., protein-protein, protein-DNA)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005488> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:NodeEntity .
+
+bn:CDS a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Coding Sequence (CDS)" ;
+    rdfs:comment "The portion of a gene's DNA or RNA that is translated into protein., Translated portion of exon that encodes protein." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000316> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Catalysis a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Catalysis" ;
+    rdfs:comment "A relationship where one entity, typically an enzyme, facilitates a reaction involving another entity without being consumed." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0003824> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Complex,
+        bn:Protein ;
+    bn:expectedRight bn:Reaction .
+
+bn:CellWall a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "cell wall" ;
+    rdfs:comment "a polarized stack of flattened membrane-bound cisternae, with associated vesicles, involved in modifying, sorting, and packaging proteins and lipids. It has a cis (receiving) face and a trans (shipping) face, reflecting its role in intracellular transport." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005618> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:CircularRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "circRNA" ;
+    rdfs:comment "A non-coding single-stranded RNAs, covalently closed RNA with regulatory function." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002291> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:CoOccurence a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Co-occurrence" ;
+    rdfs:comment "A relationship where two entities are repeatedly observed together across different datasets or conditions." ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene,
+        bn:Protein ;
+    bn:expectedRight bn:Gene,
+        bn:Protein .
+
+bn:CompoundMediatedStep a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Compound-mediated step" ;
+    rdfs:comment "A derived network step representing one segment of a compound-mediated biological relationship. It does not by itself assert production, binding, activation, or inhibition." ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:Cytoplasm a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "cytoplasm" ;
+    rdfs:comment "The part of the cell contained within the entire plasma membrane, excluding the nucleus, and composed of the cytosol and all organelles except the nucleus and their contents." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005737> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Cytoskeleton a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "cytoskeleton" ;
+    rdfs:comment "A structural framework within the cytoplasm that includes actin filaments, microtubules, and intermediate filaments, essential for maintaining cell shape, intracellular transport, and signal transduction." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005856> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Decrease a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Decrease" ;
+    rdfs:comment "A relationship where one biological entity reduces, inhibits, or diminishes the activity, expression, or abundance of another." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_2242> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:EdgeEntity,
+        bn:NodeEntity .
+
+bn:Degradation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Degradation" ;
+    rdfs:comment "A process in which a biological molecule, such as a protein, RNA, or metabolite, is broken down into simpler components, leading to loss of its original function or structure." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0044265> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:NodeEntity .
+
+bn:Dephosphorylation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Dephosphorylation" ;
+    rdfs:comment "The process of removing one or more phosphoric (ester or anhydride) residues from a molecule." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0016311> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Protein ;
+    bn:expectedRight bn:Protein .
+
+bn:Dimerization a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Dimerization" ;
+    rdfs:comment "A relationship that two proteins bind together to form a functional unit" ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0046983> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Protein ;
+    bn:expectedRight bn:Protein .
+
+bn:Dissociation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Dissociation" ;
+    rdfs:comment "A relationship where entities previously bound together become separated, indicating a loss of interaction." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/INO_0000092> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:NodeEntity .
+
+bn:DoubleStrandedRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "dsRNA" ;
+    rdfs:comment "Genetic material consisting of two complementary RNA strands base-paired into a double helix, often encapsulated by viral capsid proteins, which triggers antiviral responses including RNA interference" ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000965> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:ERGogiIntermediateCompartment a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "ER-Golgi intermediate compartment" ;
+    rdfs:comment "A transient membrane-bound compartment located between the endoplasmic reticulum and Golgi apparatus that facilitates protein trafficking." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005793> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Endosome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Endosome" ;
+    rdfs:comment "A membrane-bound vesicular structure involved in the internalization and sorting of materials taken up by endocytosis, forming an intermediate compartment between the plasma membrane and lysosomes." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005768> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Enhancement a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Enhancement" ;
+    rdfs:comment "A genetic relationship where combined mutations result in a stronger or more severe phenotype than expected." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_1131> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:Enhancer a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Enhancer" ;
+    rdfs:comment "A DNA sequence that increases transcription levels of a gene from a distance., Acts over distance to increase gene transcription." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000165> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:EnhancerRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "eRNA" ;
+    rdfs:comment "Non-coding RNA transcribed from enhancer regions; modulates transcription of target genes." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001870> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Exon a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Exon" ;
+    rdfs:comment "A DNA sequence that remains in the mature RNA and may encode protein., Part of gene retained in mature RNA; may include coding or UTR." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000147> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Expression a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Expression" ;
+    rdfs:comment "The process in which a gene's sequence is converted into a mature gene product (protein or RNA). This includes the production of an RNA transcript and its processing, as well as translation and maturation for protein-coding genes." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO:0010467> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene,
+        bn:Rna ;
+    bn:expectedRight bn:Protein .
+
+bn:ExtracellularMatrix a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Extracellular Matrix" ;
+    rdfs:comment "A complex network of proteins and polysaccharides located outside the plasma membrane that provides structural support and mediates cell signaling." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0031012> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:ExtracellularVesicle a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Extracellular Vesicle" ;
+    rdfs:comment "Any vesicle that is part of the extracellular region" ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_1903561> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:FivePrimeCap a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "5' Cap" ;
+    rdfs:comment "Cap added to the 5′ end of mRNA for protection and translation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000581> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Fusion a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Fusion" ;
+    rdfs:comment "A relationship of a hybrid gene or gene product formed from two previously separate genes, typically due to chromosomal rearrangements such as translocations or deletions." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000806> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:Glycosylation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Glycosylation" ;
+    rdfs:comment "The covalent attachment and further modification of carbohydrate residues to a substrate molecule." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0070085> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:GolgiBody a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "golgi apparatus, golgi body, golgi complex" ;
+    rdfs:comment "the membrane-bound organelle found in eukaryotic cells, known for its role in modifying, sorting, and packaging proteins and lipids. Morphologically, it has a very distinctive and organized structure." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005794> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:GuideRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "gRNA" ;
+    rdfs:comment "a non-coding RNA that guides site-specific genome editing or RNA modification, e.g., in CRISPR or RNA editing complexes." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000602> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Increase a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Increase" ;
+    rdfs:comment "A relationship where one biological entity enhances, promotes, or elevates the activity, expression, or abundance of another." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_2237> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:EdgeEntity,
+        bn:NodeEntity .
+
+bn:Indirect a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Indirect" ;
+    rdfs:comment "The relationship is known to occur through one or more intermediate biological steps that are not explicitly resolved." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_2286> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:Inhibition a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Inhibition" ;
+    rdfs:comment "A relationship where one entity reduces, blocks, or suppresses the activity or function of another (e.g. gene, protein)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/INO_0000124> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:NodeEntity ;
+    bn:expectedRight bn:EdgeEntity,
+        bn:NodeEntity,
+        bn:PathwayModule .
+
+bn:Insulator a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Insulator" ;
+    rdfs:comment "A DNA element that blocks interactions between enhancers and unrelated promoters., Defines regulatory boundaries between domains." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000627> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Intron a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Intron" ;
+    rdfs:comment "A non-coding segment within a gene that is removed during RNA splicing., Non-coding DNA spliced out during mRNA processing." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000188> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Irreversible a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "irreversible reaction" ;
+    rdfs:comment "A reaction rate  always refers to a single direction (forward or reverse)" ;
+    rdfs:seeAlso <http://biomodels.net/SBO/SBO_0000153> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:LongNonCodingRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "lncRNA" ;
+    rdfs:comment "A non-coding RNA regulates transcription, epigenetic modification, and mRNA splicing without encoding proteins." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001877> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:LysosomalMembrane a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Lysosomal Membrane" ;
+    rdfs:comment "The lipid bilayer enclosing the lysosome, containing proteins essential for substance transport and maintaining acidic conditions required for lysosomal degradation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005765> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Lysosome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "lysosome" ;
+    rdfs:comment "the spherical, membrane-bound organelles containing hydrolytic enzymes active at low pH. They function as the digestive system of the cell, breaking down waste, macromolecules, and cellular debris." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005764> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:MessengerRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "mRNA" ;
+    rdfs:comment "Encodes the genetic blueprint transcribed from DNA and delivers it to ribosomes for protein synthesis." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000234> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Methylation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Methylation" ;
+    rdfs:comment "The process in which a methyl group is covalently attached to a molecule." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0032259> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:MicroRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "miRNA" ;
+    rdfs:comment "A non-coding RNA regulates gene expression post-transcriptionally by binding to target mRNAs and inhibiting translation or promoting degradation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000276> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:MissingInteraction a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Missing interaction" ;
+    rdfs:comment "An interaction expected in the reference pathway but absent, e.g. because of mutation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_0573> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:Mitochondria a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "mitochondria" ;
+    rdfs:comment "the double-membraned organelles with an outer membrane and a highly folded inner membrane forming cristae, enclosing a protein-rich matrix. Their elongated shape and internal complexity reflect their role in ATP production through aerobic respiration." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005739> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:MultivesicularBody a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "multivesicular bodies" ;
+    rdfs:comment "A type of late endosome characterized by internal vesicles formed by inward budding, involved in sorting membrane proteins for degradation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005771> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:NegativeCorrelation a owl:Class,
+        owl:NamedIndividual,
+        bn:CoExpression ;
+    rdfs:label "Negative Correlation" ;
+    rdfs:comment "The relationship that when one gene's expression goes up, the other's consistently goes down" ;
+    rdfs:subClassOf bn:CoExpression ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:NoInteraction a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "No interaction" ;
+    rdfs:comment "A relationship where the combined effect of two mutations shows no significant difference from their individual effects." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_2226> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:NuclearPoreComplex a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Nuclear Pore Complex" ;
+    rdfs:comment "A large protein complex that spans the nuclear envelope, regulating the bidirectional transport of molecules between the nucleus and cytoplasm." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005643> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Nucleolus a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Nucleolus" ;
+    rdfs:comment "A sub-nuclear body where ribosomal RNA is synthesized and ribosome assembly begins, serving as a critical node for protein biosynthesis." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005730> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Nucleus a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "nucleus" ;
+    rdfs:comment "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005634> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:ORF a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Open Reading Frame (ORF)" ;
+    rdfs:comment "A sequence of DNA that could potentially encode a protein, starting with a start codon and ending with a stop codon., Potential protein-coding frame bounded by start and stop codons." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000236> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:Peroxisome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "peroxisomes" ;
+    rdfs:comment "A small, single-membrane-bound organelle containing enzymes for lipid metabolism and the detoxification of hydrogen peroxide." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005777> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:Phosphorylation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Phosphorylation" ;
+    rdfs:comment "A protein modification that effectively replaces a hydrogen atom with a phosphono group (H2PO3 or 'phosphate')." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MOD_00696> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:PiwiInteractingRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "piRNA" ;
+    rdfs:comment "A non-coding RNA protects genome integrity in germ cells by silencing transposable elements." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001035> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:PlasmaMembrane a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "plasma membrane" ;
+    rdfs:comment "a dynamic, semi-permeable phospholipid bilayer containing embedded proteins and carbohydrates. It defines the cell boundary and regulates the transport of substances in and out of the cell." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005886> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:PolyATail a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Poly-A Tail" ;
+    rdfs:comment "Post-transcriptional feature stabilizing mRNA." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000553> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:PositiveCorrelation a owl:Class,
+        owl:NamedIndividual,
+        bn:CoExpression ;
+    rdfs:label "Positive Correlation" ;
+    rdfs:comment "The relationship that one gene's expression level increases across samples, the other gene's expression also increases." ;
+    rdfs:subClassOf bn:CoExpression ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:PrecursorMiRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "pre-miRNA" ;
+    rdfs:comment "Hairpin-shaped RNA processed in the nucleus and cytoplasm to produce mature microRNAs." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000185> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Promoter a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Promoter" ;
+    rdfs:comment "A DNA region where RNA polymerase binds to initiate transcription., Initiates transcription by binding RNA polymerase." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000167> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:RegulateExpression a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Regulates xpression" ;
+    rdfs:comment "A relationship indicating that one entity promotes or is responsible for the gene expression of another." ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene,
+        bn:Protein,
+        bn:Rna ;
+    bn:expectedRight bn:Gene .
+
+bn:Repression a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Repression" ;
+    rdfs:comment "A relationship where one entity negatively regulates or suppresses the gene expression of another." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0010629> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Protein,
+        bn:Rna ;
+    bn:expectedRight bn:Gene .
+
+bn:Reversible a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "reversible reaction" ;
+    rdfs:comment "A reaction rate  always refers to a  reversible  direction (forward and reverse). They can proceed in both directions." ;
+    rdfs:seeAlso <http://biomodels.net/SBO/SBO_0000156> ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:RibosomalRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "rRNA" ;
+    rdfs:comment "Forms the catalytic and structural core of ribosomes, facilitating peptide bond formation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000252> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Ribosome a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "ribosome" ;
+    rdfs:comment "A small, non-membrane-bound macromolecular complex composed of rRNA and proteins that synthesizes proteins by translating mRNA." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005840> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:RiboswitchRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "RiboswitchRNA" ;
+    rdfs:comment "a noncoding RNA domains that are typically found embedded in messenger RNAs, where they sense specific target molecules or elemental ions and regulate gene expression" ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000035> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:RoughER a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "rough endoplasmic reticulum" ;
+    rdfs:comment "A series of flattened membrane sacs studded with ribosomes, primarily responsible for the synthesis and initial folding of membrane-bound and secretory proteins." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005791> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:SevenSKRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "7SK small nuclear RNA" ;
+    rdfs:comment "7SK is a highly conserved noncoding RNA of 331 nucleotides in animals. It  regulates transcription elongation by sequestering the positive transcription elongation factor b (P-TEFb)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002340> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:SignalCrosstalk a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Signal Crosstalk" ;
+    rdfs:comment "A relationship where one signaling pathway influences another," ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:PathwayModule ;
+    bn:expectedRight bn:PathwayModule,
+        bn:Protein .
+
+bn:Silencer a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Silencer" ;
+    rdfs:comment "A regulatory element that represses transcription of a gene., Prevents transcription of nearby gene sequences." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000625> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:SmallInterferingRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "siRNA" ;
+    rdfs:comment "A non-coding RNAs that induce  the degradation of complementary mRNA molecules through the RNA interference pathway." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000646> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:SmallNuclearRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "snRNA" ;
+    rdfs:comment "A non-coding RNA which is an essential component of the spliceosome involved in pre-mRNA splicing." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000274> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:SmoothER a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "smooth endoplasmic reticulum" ;
+    rdfs:comment "An interconnected network of membrane-bound tubules lacking ribosomes, involved in lipid synthesis, detoxification, and calcium storage." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005790> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:StateTransition a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "State transition" ;
+    rdfs:comment "A biological event in which the same biological entity changes its state without becoming a different entity. The change may involve its location or membrane orientation, conformation or molecular modification state, or functional activity." ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:SuccessiveReaction a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Successive reaction relationship" ;
+    rdfs:comment "A relationship between catalytic entities whose biochemical reactions occur successively and are connected through a shared intermediate compound." ;
+    rdfs:subClassOf bn:RelationshipType .
+
+bn:Suppression a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Suppression" ;
+    rdfs:comment "A genetic relationship where a mutation in one gene compensates for or rescues the phenotype of a mutation in another gene." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_1130> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Gene .
+
+bn:TelomeraseRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "Telomerase RNA component (TERC)" ;
+    rdfs:comment "a non-coding template RNA component of telomerase that directs telomere repeat synthesis at chromosome ends." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000390> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Terminator a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "Terminator" ;
+    rdfs:comment "A DNA sequence that signals the end of transcription., Marks the end of transcription by RNA polymerase." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000141> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:ThreePrimeUTR a owl:Class,
+        owl:NamedIndividual,
+        bn:UTR ;
+    rdfs:label "3' UTR" ;
+    rdfs:comment "3′ region that affects stability and localization of mRNA., The 3' untranslated region downstream of the coding sequence in mRNA." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000205> ;
+    rdfs:subClassOf bn:UTR .
+
+bn:TranscriptionTo a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Transcription to" ;
+    rdfs:comment "The process by which the genetic information stored in DNA is copied into a new molecule of messenger RNA (mRNA)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0009299> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene ;
+    bn:expectedRight bn:Rna .
+
+bn:TransferRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "tRNA" ;
+    rdfs:comment "Adapter molecule that translates mRNA codons into amino acids during protein synthesis." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000253> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Translation a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Translation" ;
+    rdfs:comment "The process by which a cell's machinery reads the genetic information on an mRNA molecule and synthesizes a protein from it." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0006412> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Rna ;
+    bn:expectedRight bn:Protein .
+
+bn:Ubiquitination a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Ubiquitination" ;
+    rdfs:comment "A relationship where one protein catalyzes the covalent addition of ubiquitin to another protein." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0016567> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Protein ;
+    bn:expectedRight bn:Protein .
+
+bn:Vacuole a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "vacuole" ;
+    rdfs:comment "A membrane-bound organelle prominent in plant and fungal cells, involved in storage, degradation, and maintaining turgor pressure." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005773> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:VaultRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "vtRNA" ;
+    rdfs:comment "A non-coding small RNA associated with vault complexes; its exact biological function remains unclear." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002040> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:Vesicle a owl:Class,
+        owl:NamedIndividual,
+        bn:CellComponent ;
+    rdfs:label "Vesicle" ;
+    rdfs:comment "A small, membrane-enclosed sac within the cytoplasm, used to transport proteins, lipids, and other molecules between organelles or to the plasma membrane, playing a central role in exocytosis, endocytosis, and intracellular signaling pathways." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0031982> ;
+    rdfs:subClassOf bn:CellComponent .
+
+bn:YRNA a owl:Class,
+        owl:NamedIndividual,
+        bn:RnaRegion ;
+    rdfs:label "YRNA" ;
+    rdfs:comment "Involved in initiation of DNA replication and RNA quality control in conjunction with Ro60 protein." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000405> ;
+    rdfs:subClassOf bn:RnaRegion .
+
+bn:cellularLocation a owl:ObjectProperty ;
+    rdfs:label "cellular location"@en ;
+    rdfs:comment "Represents the cellular location or localization." ;
+    rdfs:domain bn:NodeEntity ;
+    rdfs:range bn:CellularLocation ;
+    rdfs:seeAlso bp:cellularLocation .
+
+bn:chromosome a owl:DatatypeProperty ;
+    rdfs:label "chromosome"@en ;
+    rdfs:comment "Specifies the chromosome on which a gene or region is located." ;
+    rdfs:domain bn:Dna ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <http://biohackathon.org/resource/faldo#location>,
+        <http://purl.obolibrary.org/obo/RO_0001025> .
+
+bn:clusteringMethod a owl:DatatypeProperty ;
+    rdfs:label "clustering method"@en ;
+    rdfs:comment "Specifies the clustering algorithm used for grouping entities." ;
+    rdfs:domain bn:OrthologGroup ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://w3id.org/biolink/vocab/supporting_study_method_type> .
+
+bn:collectedDate a owl:DatatypeProperty ;
+    rdfs:label "collected date"@en ;
+    rdfs:comment "Records the date and time on which the information was collected or obtained from its source." ;
+    rdfs:domain bn:Provenance ;
+    rdfs:range xsd:dateTime ;
+    rdfs:seeAlso prov:generatedAtTime .
+
+bn:createdBy a owl:ObjectProperty ;
+    rdfs:label "created by"@en ;
+    rdfs:comment "Identifies the person, organization, software, or other agent responsible for creating or recording the information." ;
+    rdfs:domain bn:Provenance ;
+    rdfs:seeAlso prov:wasAttributedTo .
+
+bn:derivedFrom a owl:ObjectProperty ;
+    rdfs:label "derived from"@en ;
+    rdfs:comment "Identifies another resource, dataset, or information item from which the current information was derived." ;
+    rdfs:domain bn:Provenance ;
+    rdfs:seeAlso prov:wasDerivedFrom .
+
+bn:endPos a owl:DatatypeProperty ;
+    rdfs:label "end position"@en ;
+    rdfs:comment "Relates a sequence feature to an object that represents its end coordinate on a reference sequence." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Rna ) ] ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:seeAlso <http://biohackathon.org/resource/faldo#end>,
+        <http://purl.obolibrary.org/obo/RO_0002518> .
+
+bn:expectedLeft a owl:AnnotationProperty ;
+    rdfs:label "expected left participant type"@en ;
+    rdfs:comment "Non-logical metadata listing an allowed left-participant class for a relationship type; multiple values represent alternatives." ;
+    rdfs:subPropertyOf bn:expectedParticipant .
+
+bn:expectedRight a owl:AnnotationProperty ;
+    rdfs:label "expected right participant type"@en ;
+    rdfs:comment "Non-logical metadata listing an allowed right-participant class for a relationship type; multiple values represent alternatives." ;
+    rdfs:subPropertyOf bn:expectedParticipant .
+
+bn:hasCasNum a owl:DatatypeProperty ;
+    rdfs:label "has CAS number"@en ;
+    rdfs:comment "the object has an identifier used by the Chemical Abstracts Service database." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso sio:CHEMINF_00044 .
+
+bn:hasChemFormula a owl:DatatypeProperty ;
+    rdfs:label "has chemical formular"@en ;
+    rdfs:comment "Represents the molecular formula of a chemical compound." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso sio:CHEMINF_000042 .
+
+bn:hasCofactor a owl:ObjectProperty ;
+    rdfs:label "has cofactor"@en ;
+    rdfs:comment "Associates a molecule with a required cofactor." ;
+    rdfs:domain bn:Protein ;
+    rdfs:range bn:SmallMolecule ;
+    rdfs:seeAlso uniprot:cofactor .
+
+bn:hasConfidenceScore a owl:DatatypeProperty ;
+    rdfs:label "has confidence score"@en ;
+    rdfs:comment "Score representing confidence in the annotation or relationship." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:EdgeEntity bn:OrthologGroup ) ] ;
+    rdfs:range xsd:float ;
+    rdfs:seeAlso <https://w3id.org/biolink/vocab/ConfidenceLevel> .
+
+bn:hasDbXref a owl:ObjectProperty ;
+    rdfs:label "has database cross reference"@en ;
+    rdfs:comment "Indicates a cross-reference to an external database that provides additional information about the entity." ;
+    rdfs:domain bn:Entity ;
+    rdfs:seeAlso <http://www.geneontology.org/formats/oboInOwl#hasDbXref> .
+
+bn:hasEcNumber a owl:ObjectProperty ;
+    rdfs:label "has EC number"@en ;
+    rdfs:comment "Links a biochemical reaction to the Enzyme Commission classification corresponding to the enzymatic activity that catalyzes the reaction." ;
+    rdfs:domain bn:Reaction ;
+    rdfs:seeAlso bp:eCNumber .
+
+bn:hasExternalId a owl:ObjectProperty ;
+    rdfs:label "has external identifier"@en ;
+    rdfs:comment "Associates an entity with an external database identifier that has been accepted as an equivalent identifier for the same entity. This property is used for entity integration and identifier normalization. In contrast to hasDbXref, which records source-provided cross-references without asserting equivalence, hasExternalId indicates that the linked identifier refers to the same integrated entity." ;
+    rdfs:domain bn:Entity .
+
+bn:hasFunction a owl:ObjectProperty ;
+    rdfs:label "has function"@en ;
+    rdfs:comment "the information of  a gene to its function term sourced from external datasets (e.g., imported annotations)" ;
+    rdfs:domain bn:Gene .
+
+bn:hasInChI a owl:DatatypeProperty ;
+    rdfs:label "has InChI"@en ;
+    rdfs:comment "Stores the IUPAC International Chemical Identifier (InChI)." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso sio:CHEMINF_000038 .
+
+bn:hasInChIKey a owl:DatatypeProperty ;
+    rdfs:label "has InChI Key"@en ;
+    rdfs:comment "Stores the hashed InChIKey version of the chemical identifier." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso sio:CHEMINF_000059 .
+
+bn:hasModificationSitedOn a owl:DatatypeProperty ;
+    rdfs:label "has modification sited on"@en ;
+    rdfs:comment "Specifies the amino acid residue and position where the protein is modified, expressed in text (e.g., 'Ser473', Ser473-phosphorylation”, “Lys9Ac\"). The RDF object represented as an RDF resource identified by the protein accession and modification site (e.g., 'UniProt:P31749_Ser473', 'UniProt:P68431_Lys9Ac')" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Protein bn:Rna ) ] ;
+    rdfs:range xsd:string .
+
+bn:hasNetCharge a owl:DatatypeProperty ;
+    rdfs:label "has net charge"@en ;
+    rdfs:comment "The overall electrical charge of a chemical entity after considering all atoms and charged groups in the represented chemical structure." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:integer ;
+    rdfs:seeAlso sio:CHEMINF_000120 .
+
+bn:hasOrthologGroup a owl:ObjectProperty ;
+    rdfs:label "has ortholog group"@en ;
+    rdfs:comment "Links an entity (e.g., a gene or protein) to the identifier of its ortholog group, representing a set of evolutionarily conserved homologs across species." ;
+    rdfs:domain bn:Protein ;
+    rdfs:range bn:OrthologGroup ;
+    rdfs:seeAlso orth:hasOrtholog .
+
+bn:hasProteinMember a owl:ObjectProperty ;
+    rdfs:label "has protein member"@en ;
+    rdfs:comment "Identifies individual protein members of a gene or ortholog group." ;
+    rdfs:domain bn:OrthologGroup ;
+    rdfs:range bn:Protein ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0002351> ;
+    rdfs:subPropertyOf bn:hasMember .
+
+bn:hasProvenance a owl:ObjectProperty ;
+    rdfs:label "has provenance"@en ;
+    rdfs:comment "Links an entity to provenance information describing the source, origin, collection, creation, or modification of the entity's data." ;
+    rdfs:domain bn:Entity ;
+    rdfs:range bn:Provenance .
+
+bn:hasSeq a owl:DatatypeProperty ;
+    rdfs:label "has sequence"@en ;
+    rdfs:comment "Holds the nucleotide or amino acid sequence as a string." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Protein bn:Rna ) ] ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <http://www.bioassayontology.org/bao#BAO_0002817> .
+
+bn:hasSmiles a owl:DatatypeProperty ;
+    rdfs:label "has SMILES"@en ;
+    rdfs:comment "Stores the SMILES (Simplified Molecular-Input Line-Entry System) notation." ;
+    rdfs:domain bn:SmallMolecule ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso sio:CHEMINF_000020 .
+
+bn:hasSource a owl:ObjectProperty ;
+    rdfs:label "has source"@en ;
+    rdfs:comment "Identifies the original source from which the information was obtained, such as a URL, book, paper, database, or report." ;
+    rdfs:domain bn:Provenance ;
+    rdfs:seeAlso dct:source .
+
+bn:hasSpeciesCoverage a owl:ObjectProperty ;
+    rdfs:label "has species coverage"@en ;
+    rdfs:comment "A set of species that related to the domain" ;
+    rdfs:domain bn:OrthologGroup ;
+    rdfs:range bn:Taxon .
+
+bn:hasSubcomplex a owl:ObjectProperty ;
+    rdfs:label "has subcomplex"@en ;
+    rdfs:comment "Relates a biological complex to a subcomplex that serves as one of its components." ;
+    rdfs:domain bn:Complex ;
+    rdfs:range bn:Complex .
+
+bn:hasTemplate a owl:ObjectProperty ;
+    rdfs:label "has template"@en ;
+    rdfs:comment "Indicates that the subject entity is derived from or synthesized using the object entity as a template. For example, DNA is a template for RNA during transcription, or a gene is derived from a DNA sequence." ;
+    rdfs:domain bn:Gene ;
+    rdfs:range bn:Dna ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0001000> ;
+    owl:inverseOf bn:annotates .
+
+bn:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "has weight"@en ;
+    rdfs:comment "Indicates the significance value assigned to an edge or interaction, representing its relative strength, reliability, or importance within a network. Typically expressed as a floating-point number." ;
+    rdfs:domain bn:EdgeEntity ;
+    rdfs:range xsd:float .
+
+bn:isIsoformOf a owl:ObjectProperty ;
+    rdfs:label "is isoform of"@en ;
+    rdfs:comment "Relates an isoform to the canonical protein or gene from which it is derived. This property indicates that the subject represents a specific isoform, arising from processes such as alternative splicing, alternative promoter usage, or post-transcriptional variation, of the reference entity given as the object." ;
+    rdfs:domain bn:Protein ;
+    rdfs:range bn:Protein .
+
+bn:length a owl:DatatypeProperty ;
+    rdfs:label "length"@en ;
+    rdfs:comment "Specifies the number of nucleotides or residues in the feature." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Rna ) ] ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:seeAlso uniprot:length .
+
+bn:memberOfComplex a owl:ObjectProperty ;
+    rdfs:label "member of Complex"@en ;
+    rdfs:comment "Relates a biological entity (e.g., protein, RNA, or other molecule) to a molecular complex of which it is a constituent member. This property indicates that the subject participates as a component of the specified complex, contributing to its structure and/or function." ;
+    rdfs:domain bn:NodeEntity ;
+    rdfs:range bn:Complex ;
+    rdfs:subPropertyOf bn:participatesIn ;
+    owl:inverseOf bn:hasSubunit .
+
+bn:modificationType a owl:ObjectProperty ;
+    rdfs:label "modification type"@en ;
+    rdfs:comment "Specifies the type of modification represented by a biological entity. This property categorizes the nature of a change or alteration (e.g., chemical modification, structural modification, or sequence alteration), providing a broader classification than mutation-specific terms and allowing description of both genetic and non-genetic modifications." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Protein bn:Rna ) ] ;
+    rdfs:range bn:ControlledVocabulary .
+
+bn:modifiedDate a owl:DatatypeProperty ;
+    rdfs:label "modified date"@en ;
+    rdfs:comment "Records the date and time when the information was most recently modified." ;
+    rdfs:domain bn:Provenance ;
+    rdfs:range xsd:dateTime ;
+    rdfs:seeAlso dct:modified .
+
+bn:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:comment "the human-readable name of entity." ;
+    rdfs:domain bn:Entity ;
+    rdfs:range rdfs:Literal ;
+    rdfs:seeAlso uniprot:name .
+
+bn:organism a owl:ObjectProperty ;
+    rdfs:label "organism"@en ;
+    rdfs:comment "Identifies the organism to which the entity belongs." ;
+    rdfs:domain bn:Entity ;
+    rdfs:range bn:Taxon ;
+    rdfs:seeAlso bp:organism .
+
+bn:participatesInEdge a owl:ObjectProperty ;
+    rdfs:label "participates in Edge"@en ;
+    rdfs:comment "Relates an entity (e.g., gene, protein, or small molecule) to a specific interaction or relationship instance (edge) in which it participates. This property is used to associate biological entities with edges in a graph model, enabling representation of their roles within interactions such as binding, regulation, or signaling." ;
+    rdfs:domain bn:NodeEntity ;
+    rdfs:range bn:EdgeEntity ;
+    rdfs:subPropertyOf bn:participatesIn .
+
+bn:publicationEvidence a owl:ObjectProperty ;
+    rdfs:label "publication evidence"@en ;
+    rdfs:comment "Provides a reference to supporting literature or data source." ;
+    rdfs:domain bn:Entity ;
+    rdfs:seeAlso uniprot:citation .
+
+bn:startPos a owl:DatatypeProperty ;
+    rdfs:label "start position"@en ;
+    rdfs:comment "Relates a sequence feature to an object that represents its start coordinate on a reference sequence." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Rna ) ] ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:seeAlso <http://biohackathon.org/resource/faldo#begin>,
+        <http://purl.obolibrary.org/obo/RO_0002516> .
+
+bn:synonyms a owl:DatatypeProperty ;
+    rdfs:label "synonyms"@en ;
+    rdfs:comment "Alternative names or labels for the same entity." ;
+    rdfs:domain bn:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso skos:altLabel .
+
+bn:variantType a owl:ObjectProperty ;
+    rdfs:label "variant type"@en ;
+    rdfs:comment "Specifies the type of mutation represented by a biological variant. This property categorizes the variant according to the nature of the sequence alteration (e.g., substitution, deletion, insertion, duplication, inversion, or frameshift), enabling consistent classification and filtering of variants based on mutation type. The Range of this property should be ControlledVocabulary." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Protein bn:Rna ) ] ;
+    rdfs:range bn:ControlledVocabulary .
+
+dct:modified a owl:AnnotationProperty .
+
+bn:annotates a owl:ObjectProperty ;
+    rdfs:label "annotates"@en ;
+    rdfs:comment "Represents a relationship where a DNA region provides annotation, reference, or mapping to a gene, indicating functional, positional, or regulatory linkage. Commonly used to associate genomic features such as promoters or enhancers with their related genes." ;
+    rdfs:domain bn:Dna ;
+    rdfs:range bn:Gene .
+
+bn:encodedBy a owl:ObjectProperty ;
+    rdfs:label "encoded by"@en ;
+    rdfs:comment "Indicates a relation of two object when the first object is a product of the second object." ;
+    rdfs:domain bn:Rna ;
+    rdfs:range bn:Dna ;
+    rdfs:seeAlso sio:SIO_010079 ;
+    owl:inverseOf bn:encodes .
+
+bn:encodes a owl:ObjectProperty ;
+    rdfs:label "encodes"@en ;
+    rdfs:comment "A relation between two objects, in which the first object contains information that is used to produce the second object." ;
+    rdfs:domain bn:Dna ;
+    rdfs:range bn:Rna ;
+    rdfs:seeAlso sio:SIO_010078 ;
+    owl:inverseOf bn:encodedBy .
+
+bn:hasMember a owl:ObjectProperty ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "Specifies members that are part of a group or collection." ;
+    rdfs:domain bn:OrthologGroup ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:Gene bn:Protein ) ] ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0002351> .
+
+bn:hasSubunit a owl:ObjectProperty ;
+    rdfs:label "has subunit"@en ;
+    rdfs:comment "Relates a biological complex to a subunit  that serves as a monomer  of its components ." ;
+    rdfs:domain bn:Complex ;
+    rdfs:range bn:NodeEntity ;
+    rdfs:seeAlso bp:component .
+
+bn:participatesInPathway a owl:ObjectProperty ;
+    rdfs:label "participates in Pathway"@en ;
+    rdfs:comment "Relates a biological entity (e.g., gene, protein, metabolite, or complex) and biological interaction to a biological pathway in which it participates. This property indicates that the subject plays a role in the processes or interactions represented by the pathway, such as signaling, metabolic, or regulatory pathways." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+    rdfs:range bn:PathwayModule ;
+    rdfs:subPropertyOf bn:participatesIn .
+
+bn:pathwayComponent a owl:ObjectProperty ;
+    rdfs:label "pathwayComponent"@en ;
+    rdfs:comment "The set of interactions and relationships  in the pathway/network." ;
+    rdfs:domain bn:PathwayModule ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+    rdfs:seeAlso bp:pathwayComponent ;
+    owl:inverseOf bn:participatesInPathway .
+
+<https://orcid.org/0009-0003-1344-2449> rdfs:label "Nutticha Silakom"@en .
+
+<https://s3bio.gitlab.io/> rdfs:label "S3Bio Lab"@en .
+
+bn:Influence a owl:Class ;
+    rdfs:label "influence" ;
+    rdfs:comment "An occurrent entity representing a directed influence whereby a source entity modulates, activates, inhibits, or otherwise alters the state or behavior of a target entity. The target may be another EdgeEntity or a higher-level construct such as a PathwayModule." ;
+    rdfs:seeAlso bp:Control ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+            owl:onProperty bn:hasRight ],
+        bn:EdgeEntity ;
+    owl:disjointWith bn:Interaction,
+        bn:Reaction .
+
+bn:Interaction a owl:Class ;
+    rdfs:label "Interaction" ;
+    rdfs:comment "An occurrent entity representing an association between two or more biological entities that results in a change or influence on their state, function, or behavior. Interactions may involve physical contact, information transfer, or indirect functional relationships." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom bn:NodeEntity ;
+            owl:onProperty bn:hasRight ],
+        bn:EdgeEntity ;
+    owl:disjointWith bn:Influence,
+        bn:Reaction .
+
+bn:Taxon a owl:Class ;
+    rdfs:label "Organism" ;
+    rdfs:comment "A class for describing organism with scientific name at the species level or genus level, following binomial nomenclature (e.g., Homo sapiens, Escherichia coli)." ;
+    rdfs:seeAlso uniprot:Taxon ;
+    rdfs:subClassOf bn:Entity ;
+    owl:disjointWith bn:EdgeEntity,
+        bn:NodeEntity,
+        bn:PathwayModule .
+
+bn:UTR a owl:Class,
+        owl:NamedIndividual,
+        bn:DnaRegion ;
+    rdfs:label "UTR" ;
+    rdfs:comment "Untranslated region affecting mRNA regulation., Untranslated regions at the 5' and 3' ends of mRNA that regulate translation and stability." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000203> ;
+    rdfs:subClassOf bn:DnaRegion .
+
+bn:expectedParticipant a owl:AnnotationProperty ;
+    rdfs:label "expected participant"@en ;
+    rdfs:comment "Non-logical metadata listing an allowed participant class for a relationship type; multiple values represent alternatives." .
+
+bn:hasLeft a owl:ObjectProperty ;
+    rdfs:label "has left"@en ;
+    rdfs:comment "The participants on the left side of relationship." ;
+    rdfs:domain bn:EdgeEntity ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+    rdfs:seeAlso bp:left .
+
+bn:hasType a owl:ObjectProperty ;
+    rdfs:label "has type"@en ;
+    rdfs:comment "The relationship or interaction type of the EdgeEntity class." ;
+    rdfs:domain bn:EdgeEntity ;
+    rdfs:range bn:RelationshipType ;
+    rdfs:seeAlso bp:interactionType .
+
+bn:hasRegion a owl:ObjectProperty ;
+    rdfs:label "has region"@en ;
+    rdfs:comment "Identifies a specific region within a gene, genome, or molecule." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Rna ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:DnaRegion bn:RnaRegion ) ] ;
+    rdfs:seeAlso <http://biohackathon.org/resource/faldo#Region> .
+
+bn:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    rdfs:comment "Denotes a reaction, pathway, or complex in which the entity participates." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0000056> .
+
+bn:CoExpression a owl:Class,
+        owl:NamedIndividual,
+        bn:RelationshipType ;
+    rdfs:label "Co-expression" ;
+    rdfs:comment "A relationship where two genes or proteins are expressed under similar conditions, implying potential co-regulation." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/MI_2231> ;
+    rdfs:subClassOf bn:RelationshipType ;
+    bn:expectedLeft bn:Gene,
+        bn:Rna ;
+    bn:expectedRight bn:Gene,
+        bn:Rna .
+
+bn:Reaction a owl:Class ;
+    rdfs:label "Reaction" ;
+    rdfs:comment "An occurrent entity representing a sequence of biochemical or cellular events that transforms input entities (substrates) into output entities (products), often mediated by enzymatic or regulatory mechanisms." ;
+    rdfs:seeAlso bp:BiochemicalReaction ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom bn:NodeEntity ;
+            owl:onProperty bn:hasRight ],
+        bn:EdgeEntity ;
+    owl:disjointWith bn:Influence,
+        bn:Interaction .
+
+bn:hasHGVS a owl:DatatypeProperty ;
+    rdfs:label "has HGVS"@en ;
+    rdfs:comment "Associates a biological variant with its HGVS-compliant description. This property links a variant entity to a string or identifier that encodes its precise sequence alteration using the standardized nomenclature defined by the Human Genome Variation Society (HGVS)." ;
+    rdfs:domain bn:NodeEntity ;
+    rdfs:range xsd:string .
+
+bn:hasRight a owl:ObjectProperty ;
+    rdfs:label "has right"@en ;
+    rdfs:comment "The participants on the right side of relationship." ;
+    rdfs:domain bn:EdgeEntity ;
+    rdfs:seeAlso bp:right .
+
+bn:isVariantOf a owl:ObjectProperty ;
+    rdfs:label "is variant of"@en ;
+    rdfs:comment "Relates a biological variant to the reference sequence, gene, or entity from which it is derived. This property indicates that the subject represents a modified form (e.g., mutation, polymorphism, or alteration) of the object, typically described using standardized nomenclature such as HGVS. It is used to link a specific variant instance to its canonical or reference counterpart." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Protein bn:Rna ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Protein bn:Rna ) ] ;
+    owl:inverseOf bn:hasVariant .
+
+bn:CellularLocation a owl:Class,
+        owl:NamedIndividual,
+        bn:ControlledVocabulary ;
+    rdfs:label "Cellular location" ;
+    rdfs:comment "A controlled vocabulary class describing the location of a biological entity within or around a cell, based on standardized Gene Ontology cellular component terms. This includes subcellular compartments, macromolecular structures, and extracellular regions." ;
+    rdfs:seeAlso bp:CellularLocationVocabulary ;
+    rdfs:subClassOf bn:ControlledVocabulary ;
+    owl:disjointWith bn:RegionType,
+        bn:RelationshipType .
+
+bn:hasVariant a owl:ObjectProperty ;
+    rdfs:label "has variant"@en ;
+    rdfs:comment "A  gene or gene product to a specific sequence variant described using HGVS notation (e.g., cDNA, protein, or genomic level). The object is an RDF resource identified by a unique identifier combining the protein or gene accession and the HGVS expression (e.g., UniProt:P04637_p.R273H)." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Protein bn:Rna ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( bn:Dna bn:Gene bn:Protein bn:Rna ) ] .
+
+bn:Provenance a owl:Class ;
+    rdfs:label "Provenance" ;
+    rdfs:comment "A metadata that describing the sources, entities, agents, and activities involved in the creation, modification, or derivation of RDF data." ;
+    rdfs:seeAlso <https://www.w3.org/TR/prov-o/> ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith bn:ControlledVocabulary,
+        bn:Entity .
+
+bn:RegionType a owl:Class,
+        owl:NamedIndividual,
+        bn:ControlledVocabulary ;
+    rdfs:label "Region type" ;
+    rdfs:comment "A controlled vocabulary class describing a defined a classification of sequence regions, independent of whether they occur in DNA or RNA." ;
+    rdfs:seeAlso bp:SequenceRegionVocabulary ;
+    rdfs:subClassOf bn:ControlledVocabulary ;
+    owl:disjointWith bn:CellularLocation,
+        bn:RelationshipType .
+
+bn:Complex a owl:Class ;
+    rdfs:label "Biomolecular complex" ;
+    rdfs:comment "A  physical entity representing a stable assembly of molecular components that collectively perform a biological function. Such assemblies are characterized by sustained or regulatory interactions between components and exclude transient, short-lived associations involved solely in catalytic processes." ;
+    rdfs:seeAlso bp:Complex ;
+    rdfs:subClassOf bn:NodeEntity ;
+    owl:disjointWith bn:Dna,
+        bn:Gene,
+        bn:OrthologGroup,
+        bn:Rna,
+        bn:SmallMolecule .
+
+bn:ControlledVocabulary a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Contolled vocabulary" ;
+    rdfs:comment "A class representing a controlled and managed vocabulary of terms used for the consistent annotation and integration of biological data. It encompasses both locally defined terms and externally sourced ontology classes that are incorporated to enable interoperability across systems." ;
+    rdfs:seeAlso bp:ControlledVocabulary ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith bn:Entity .
+
+bn:OrthologGroup a owl:Class ;
+    rdfs:label "Protein ortholog groups" ;
+    rdfs:comment "A collection of proteins from different species that are orthologs, often identified from databases like OrthoDB or EggNOG. Represents evolutionary conserved protein functions across species." ;
+    rdfs:seeAlso orth:OrthologsCluster ;
+    rdfs:subClassOf bn:NodeEntity ;
+    owl:disjointWith bn:Complex,
+        bn:Dna,
+        bn:Gene,
+        bn:Protein,
+        bn:Rna,
+        bn:SmallMolecule .
+
+bn:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "An abstract superclass representing any discrete biological or conceptual entity used to describe pathway systems. This class encompasses occurrents (e.g., pathways and processes,  interactions), continuants (e.g., physical entities such as genes or proteins)." ;
+    rdfs:seeAlso bp:Entity ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith bn:ControlledVocabulary .
+
+bn:SmallMolecule a owl:Class ;
+    rdfs:label "Small molecule element" ;
+    rdfs:comment "A physical entity representing a collection of non-nucleic acid, non-protein molecules, characterized by a defined chemical structure, including small molecules and non-genomically encoded macromolecules." ;
+    rdfs:seeAlso bp:SmallMolecule ;
+    rdfs:subClassOf bn:NodeEntity ;
+    owl:disjointWith bn:Complex,
+        bn:Dna,
+        bn:Gene,
+        bn:OrthologGroup,
+        bn:Protein,
+        bn:Rna .
+
+bn:PathwayModule a owl:Class ;
+    rdfs:label "Pathway module" ;
+    rdfs:comment "a set of molecular interactions, reactions, or sub-processes serving a specific biological role that groups together related interactions, reactions, or sub-processes serving a specific biological role." ;
+    rdfs:seeAlso bp:Pathway ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+            owl:onProperty bn:pathwayComponent ],
+        bn:Entity ;
+    owl:disjointWith bn:EdgeEntity,
+        bn:NodeEntity .
+
+bn:Dna a owl:Class ;
+    rdfs:label "Dna  element" ;
+    rdfs:comment "A physical entity consisting of deoxyribonucleotide monophosphates. Represents a pool of DNA molecules. Use DnaRegion for subregions." ;
+    rdfs:seeAlso bp:Dna ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom bn:Dna ;
+            owl:onProperty bn:isVariantOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom bn:DnaRegion ;
+            owl:onProperty bn:hasRegion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( [ a owl:Restriction ;
+                                owl:onDataRange xsd:string ;
+                                owl:onProperty bn:hasHGVS ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] bn:Dna ) ] ;
+            owl:onProperty bn:hasVariant ],
+        bn:NodeEntity ;
+    owl:disjointWith bn:Complex,
+        bn:OrthologGroup,
+        bn:Protein,
+        bn:SmallMolecule .
+
+bn:EdgeEntity a owl:Class ;
+    rdfs:label "Edge entity" ;
+    rdfs:comment "An occurrent entity describing a biological association that captures interactions or influences between participating entities. This includes relationships between NodeEntities as well as more general influence relationships that may extend to EdgeEntity or PathwayModule. This class serves as a unifying superclass for both direct molecular interactions and higher-level causal or regulatory relationships." ;
+    rdfs:seeAlso bp:Interaction ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty bn:hasLeft ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom bn:RelationshipType ;
+            owl:onProperty bn:hasType ],
+        [ a owl:Restriction ;
+            owl:onProperty bn:hasRight ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty bn:hasType ;
+            owl:someValuesFrom bn:RelationshipType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( bn:EdgeEntity bn:NodeEntity bn:PathwayModule ) ] ;
+            owl:onProperty bn:hasLeft ],
+        bn:Entity ;
+    owl:disjointWith bn:NodeEntity,
+        bn:PathwayModule .
+
+bn:DnaRegion a owl:Class,
+        owl:NamedIndividual,
+        bn:RegionType ;
+    rdfs:label "Dna region" ;
+    rdfs:comment "A controlled vocabulary class describing a defined subregion of a DNA molecule. A DNARegion is not a pool of discrete molecular entities but a contextual segment that exists only as part of a larger DNA molecule and is defined by its relative position or functional role." ;
+    rdfs:subClassOf bn:RegionType .
+
+bn:Rna a owl:Class ;
+    rdfs:label "Rna  element" ;
+    rdfs:comment "A physical entity consisting of ribonucleotide monophosphates. Represents a pool of Rna molecules. Use RnaRegion for subregions. Examples: let-7 microRna, mRna, rRna." ;
+    rdfs:seeAlso bp:Rna ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( [ a owl:Restriction ;
+                                owl:onDataRange xsd:string ;
+                                owl:onProperty bn:hasHGVS ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] bn:Rna ) ] ;
+            owl:onProperty bn:hasVariant ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom bn:RnaRegion ;
+            owl:onProperty bn:hasRegion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom bn:Rna ;
+            owl:onProperty bn:isVariantOf ],
+        bn:NodeEntity ;
+    owl:disjointWith bn:Complex,
+        bn:OrthologGroup,
+        bn:Protein,
+        bn:SmallMolecule .
+
+bn:Protein a owl:Class ;
+    rdfs:label "Protein element" ;
+    rdfs:comment "A physical entity consisting of a single polypeptide chain or protein monomer, defined by an amino acid sequence, describing a protein. Examples: EGFR (epidermal growth factor receptor), insulin." ;
+    rdfs:seeAlso bp:Protein ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom bn:Protein ;
+            owl:onProperty bn:isVariantOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( [ a owl:Restriction ;
+                                owl:onDataRange xsd:string ;
+                                owl:onProperty bn:hasHGVS ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] bn:Protein ) ] ;
+            owl:onProperty bn:hasVariant ],
+        bn:NodeEntity ;
+    owl:disjointWith bn:Dna,
+        bn:Gene,
+        bn:OrthologGroup,
+        bn:Rna,
+        bn:SmallMolecule .
+
+bn:Gene a owl:Class ;
+    rdfs:label "Gene" ;
+    rdfs:comment "A sequence of DNA that contains the necessary information to produce a functional product, typically a protein or functional Rna." ;
+    rdfs:seeAlso bp:Gene ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom bn:Gene ;
+            owl:onProperty bn:isVariantOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom bn:DnaRegion ;
+            owl:onProperty bn:hasRegion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( [ a owl:Restriction ;
+                                owl:onDataRange xsd:string ;
+                                owl:onProperty bn:hasHGVS ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] bn:Gene ) ] ;
+            owl:onProperty bn:hasVariant ],
+        bn:NodeEntity ;
+    owl:disjointWith bn:Complex,
+        bn:Dna,
+        bn:OrthologGroup,
+        bn:Protein,
+        bn:Rna,
+        bn:SmallMolecule .
+
+bn:NodeEntity a owl:Class ;
+    rdfs:label "Node entity" ;
+    rdfs:comment "A biological entity representing a pool of molecules or complexes functioning as nodes in pathway models. A NodeEntity is defined by a canonical sequence or structural reference and is annotated with descriptive features, including cellular location, naming conventions, and literature evidence." ;
+    rdfs:subClassOf bn:Entity ;
+    owl:disjointWith bn:EdgeEntity,
+        bn:PathwayModule .
+
+bn:RnaRegion a owl:Class,
+        owl:NamedIndividual,
+        bn:RegionType ;
+    rdfs:label "Rna region" ;
+    rdfs:comment "A controlled vocabulary class describing a defined subregion of an RNA molecule. An RnaRegion is not a pool of discrete molecular entities but a dependent segment that exists only as part of a larger RNA molecule and is defined by its positional or functional context." ;
+    rdfs:subClassOf bn:RegionType .
+
+bn:CellComponent a owl:Class,
+        owl:NamedIndividual,
+        bn:CellularLocation ;
+    rdfs:label "Cellular Component" ;
+    rdfs:comment "The location relative to cellular structures in which a gene product performs a function, either cellular compartments (such as the nucleus, mitochondrion, or extracellular space) or stable macromolecular complexes (such as a ribosome or proteasome)." ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/GO_0005575> ;
+    rdfs:subClassOf bn:CellularLocation .
+
+bn:RelationshipType a owl:Class,
+        owl:NamedIndividual,
+        bn:ControlledVocabulary ;
+    rdfs:label "Relationship type" ;
+    rdfs:comment "A controlled vocabulary of classes representing biological interactions and relationships between two NodeEntities, used to define the RelationshipType class in RDF. The controlled vocabulary ontology can be MI, PSIMOD, GO, and etc." ;
+    rdfs:seeAlso bp:RelationshipTypeVocabulary ;
+    rdfs:subClassOf bn:ControlledVocabulary ;
+    owl:disjointWith bn:CellularLocation,
+        bn:RegionType .
+

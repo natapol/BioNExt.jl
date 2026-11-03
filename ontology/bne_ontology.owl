@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bn="https://w3id.org/bionext/ontology/"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/encodedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">encoded by</rdfs:label>
+    <rdfs:comment>Indicates a relation of two object when the first object is a product of the second object.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/SIO_010079"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/encodes"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7737f2b61c524dc592491cd81bb3ce8a">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="N803b0610f67a477d83e2094949092cbf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ERGogiIntermediateCompartment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A transient membrane-bound compartment located between the endoplasmic reticulum and Golgi apparatus that facilitates protein trafficking.</rdfs:comment>
+    <rdfs:label>ER-Golgi intermediate compartment</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005793"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Provenance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Provenance</rdfs:label>
+    <rdfs:comment>A metadata that describing the sources, entities, agents, and activities involved in the creation, modification, or derivation of RDF data.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/prov-o/"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Gene">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Gene</rdfs:label>
+    <rdfs:comment>A sequence of DNA that contains the necessary information to produce a functional product, typically a protein or functional Rna.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Ne3fda9ac35e340278a616d2509eabbaf"/>
+    <rdfs:subClassOf rdf:nodeID="Nc0c1bd31323a42b78d523c45c204a533"/>
+    <rdfs:subClassOf rdf:nodeID="N876c7bd25e39438c86e45f73bd8cc23f"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Gene"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naca642d419fb42879650b7d3e85b4e78">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N81d696e5e9f149d090209b8a87030b95"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/DoubleStrandedRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Genetic material consisting of two complementary RNA strands base-paired into a double helix, often encapsulated by viral capsid proteins, which triggers antiviral responses including RNA interference</rdfs:comment>
+    <rdfs:label>dsRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000965"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/MicroRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding RNA regulates gene expression post-transcriptionally by binding to target mRNAs and inhibiting translation or promoting degradation.</rdfs:comment>
+    <rdfs:label>miRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000276"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd40e6c5a3fa44fc8848325179809d4f8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N715a29faf97f437597256a07a68ad5f9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/isVariantOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is variant of</rdfs:label>
+    <rdfs:comment>Relates a biological variant to the reference sequence, gene, or entity from which it is derived. This property indicates that the subject represents a modified form (e.g., mutation, polymorphism, or alteration) of the object, typically described using standardized nomenclature such as HGVS. It is used to link a specific variant instance to its canonical or reference counterpart.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nbf0c324019cd44b391a6926a568171a1"/>
+    <rdfs:range rdf:nodeID="N91b7687dc3644245abd772ef8fee6993"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/hasVariant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Enhancer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A DNA sequence that increases transcription levels of a gene from a distance., Acts over distance to increase gene transcription.</rdfs:comment>
+    <rdfs:label>Enhancer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000165"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/TransferRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Adapter molecule that translates mRNA codons into amino acids during protein synthesis.</rdfs:comment>
+    <rdfs:label>tRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000253"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SmallNuclearRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding RNA which is an essential component of the spliceosome involved in pre-mRNA splicing.</rdfs:comment>
+    <rdfs:label>snRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000274"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Autophagosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A double-membrane vesicle that encloses cytoplasmic material and organelles for delivery to lysosomes during autophagy.</rdfs:comment>
+    <rdfs:label>autophagosome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005776"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf80ba439e4aa4db08ff123aca2d83ec1">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N565b8cd31a2b405cb4fcf7c4563309e4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/isVariantOf"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N875a603e782c4885b6a6fe334fe944d9">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Expression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>The process in which a gene's sequence is converted into a mature gene product (protein or RNA). This includes the production of an RNA transcript and its processing, as well as translation and maturation for protein-coding genes.</rdfs:comment>
+    <rdfs:label>Expression</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO:0010467"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PositiveCorrelation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CoExpression"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>The relationship that one gene's expression level increases across samples, the other gene's expression also increases.</rdfs:comment>
+    <rdfs:label>Positive Correlation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CoExpression"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb51234fa7c2c41d78fbe23579c96d374">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Na5d8c4ff08b649029db65c96271eb513"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae3cde7e642c4d7aa2e0e9ea42f14b21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasLeft"/>
+    <owl:allValuesFrom rdf:nodeID="N2642db6547b540cbb510947a40432cc8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Association">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdfs:comment>A general relationship where entities are observed together in a context suggesting possible biological linkage.</rdfs:comment>
+    <rdfs:label>Association</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_0915"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasCofactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has cofactor</rdfs:label>
+    <rdfs:comment>Associates a molecule with a required cofactor.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/cofactor"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N81d696e5e9f149d090209b8a87030b95">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has function</rdfs:label>
+    <rdfs:comment>the information of  a gene to its function term sourced from external datasets (e.g., imported annotations)</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/EdgeEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Edge entity</rdfs:label>
+    <rdfs:comment>An occurrent entity describing a biological association that captures interactions or influences between participating entities. This includes relationships between NodeEntities as well as more general influence relationships that may extend to EdgeEntity or PathwayModule. This class serves as a unifying superclass for both direct molecular interactions and higher-level causal or regulatory relationships.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:subClassOf rdf:nodeID="Na03fee097cb74b4f9c49e46d63302120"/>
+    <rdfs:subClassOf rdf:nodeID="N4a260d63177c49c593654b8a1e8c9d02"/>
+    <rdfs:subClassOf rdf:nodeID="N0f6d02614382408fab1ee975da397763"/>
+    <rdfs:subClassOf rdf:nodeID="Nae3cde7e642c4d7aa2e0e9ea42f14b21"/>
+    <rdfs:subClassOf rdf:nodeID="N5f1407f6edef4388b40519cceb8a09d0"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Interaction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasProteinMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has protein member</rdfs:label>
+    <rdfs:comment>Identifies individual protein members of a gene or ortholog group.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0259cf2c37c8431b91a354b8325ac163">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Complex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Biomolecular complex</rdfs:label>
+    <rdfs:comment>A  physical entity representing a stable assembly of molecular components that collectively perform a biological function. Such assemblies are characterized by sustained or regulatory interactions between components and exclude transient, short-lived associations involved solely in catalytic processes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Complex"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Fusion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A relationship of a hybrid gene or gene product formed from two previously separate genes, typically due to chromosomal rearrangements such as translocations or deletions.</rdfs:comment>
+    <rdfs:label>Fusion</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000806"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/OrthologGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Protein ortholog groups</rdfs:label>
+    <rdfs:comment>A collection of proteins from different species that are orthologs, often identified from databases like OrthoDB or EggNOG. Represents evolutionary conserved protein functions across species.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/net/orth#OrthologsCluster"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Reversible">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A reaction rate  always refers to a  reversible  direction (forward and reverse). They can proceed in both directions.</rdfs:comment>
+    <rdfs:label>reversible reaction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://biomodels.net/SBO/SBO_0000156"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Catalysis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Reaction"/>
+    <rdfs:comment>A relationship where one entity, typically an enzyme, facilitates a reaction involving another entity without being consumed.</rdfs:comment>
+    <rdfs:label>Catalysis</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na85560537ecb488faf3e1a42f0b48ed5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasHGVS"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RelationshipType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:label>Relationship type</rdfs:label>
+    <rdfs:comment>A controlled vocabulary of classes representing biological interactions and relationships between two NodeEntities, used to define the RelationshipType class in RDF. The controlled vocabulary ontology can be MI, PSIMOD, GO, and etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/CellularLocation"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SmallMolecule">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Small molecule element</rdfs:label>
+    <rdfs:comment>A physical entity representing a collection of non-nucleic acid, non-protein molecules, characterized by a defined chemical structure, including small molecules and non-genomically encoded macromolecules.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Influence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>influence</rdfs:label>
+    <rdfs:comment>An occurrent entity representing a directed influence whereby a source entity modulates, activates, inhibits, or otherwise alters the state or behavior of a target entity. The target may be another EdgeEntity or a higher-level construct such as a PathwayModule.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Nc7fe46887f3849719f46ffefca4245b3"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Control"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Interaction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Reaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Dissociation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:comment>A relationship where entities previously bound together become separated, indicating a loss of interaction.</rdfs:comment>
+    <rdfs:label>Dissociation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/INO_0000092"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne571436b8fd34360bf33f2c6ce854c56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nc8f49845ec4443e2885a4c9eb9768388"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ExtracellularMatrix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A complex network of proteins and polysaccharides located outside the plasma membrane that provides structural support and mediates cell signaling.</rdfs:comment>
+    <rdfs:label>Extracellular Matrix</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0031012"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Entity</rdfs:label>
+    <rdfs:comment>An abstract superclass representing any discrete biological or conceptual entity used to describe pathway systems. This class encompasses occurrents (e.g., pathways and processes,  interactions), continuants (e.g., physical entities such as genes or proteins).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Entity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ExtracellularVesicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>Any vesicle that is part of the extracellular region</rdfs:comment>
+    <rdfs:label>Extracellular Vesicle</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_1903561"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/isIsoformOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is isoform of</rdfs:label>
+    <rdfs:comment>Relates an isoform to the canonical protein or gene from which it is derived. This property indicates that the subject represents a specific isoform, arising from processes such as alternative splicing, alternative promoter usage, or post-transcriptional variation, of the reference entity given as the object.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ORF">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A sequence of DNA that could potentially encode a protein, starting with a start codon and ending with a stop codon., Potential protein-coding frame bounded by start and stop codons.</rdfs:comment>
+    <rdfs:label>Open Reading Frame (ORF)</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000236"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Degradation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:comment>A process in which a biological molecule, such as a protein, RNA, or metabolite, is broken down into simpler components, leading to loss of its original function or structure.</rdfs:comment>
+    <rdfs:label>Degradation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0044265"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/FivePrimeCap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>Cap added to the 5′ end of mRNA for protection and translation.</rdfs:comment>
+    <rdfs:label>5' Cap</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000581"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/collectedDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">collected date</rdfs:label>
+    <rdfs:comment>Records the date and time on which the information was collected or obtained from its source.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/AntisenseRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>RNA molecules are commonly noncoding and play regulatory roles through base-pairing interactions or transcriptional interference.</rdfs:comment>
+    <rdfs:label>asRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000644"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Irreversible">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A reaction rate  always refers to a single direction (forward or reverse)</rdfs:comment>
+    <rdfs:label>irreversible reaction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://biomodels.net/SBO/SBO_0000153"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PiwiInteractingRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding RNA protects genome integrity in germ cells by silencing transposable elements.</rdfs:comment>
+    <rdfs:label>piRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0001035"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Interaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Interaction</rdfs:label>
+    <rdfs:comment>An occurrent entity representing an association between two or more biological entities that results in a change or influence on their state, function, or behavior. Interactions may involve physical contact, information transfer, or indirect functional relationships.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Nf49115502f504902bb256f319a4079ca"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Reaction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Influence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Repression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A relationship where one entity negatively regulates or suppresses the gene expression of another.</rdfs:comment>
+    <rdfs:label>Repression</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0010629"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N876c7bd25e39438c86e45f73bd8cc23f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/isVariantOf"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasVariant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has variant</rdfs:label>
+    <rdfs:comment>A  gene or gene product to a specific sequence variant described using HGVS notation (e.g., cDNA, protein, or genomic level). The object is an RDF resource identified by a unique identifier combining the protein or gene accession and the HGVS expression (e.g., UniProt:P04637_p.R273H).</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N104972302eb242019afcafdea6707dbc"/>
+    <rdfs:range rdf:nodeID="N230eb60326eb4fd48653212eaecd497a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/EnhancerRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Non-coding RNA transcribed from enhancer regions; modulates transcription of target genes.</rdfs:comment>
+    <rdfs:label>eRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0001870"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CoOccurence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>A relationship where two entities are repeatedly observed together across different datasets or conditions.</rdfs:comment>
+    <rdfs:label>Co-occurrence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CellWall">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>a polarized stack of flattened membrane-bound cisternae, with associated vesicles, involved in modifying, sorting, and packaging proteins and lipids. It has a cis (receiving) face and a trans (shipping) face, reflecting its role in intracellular transport.</rdfs:comment>
+    <rdfs:label>cell wall</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005618"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CellComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellularLocation"/>
+    <rdfs:comment>The location relative to cellular structures in which a gene product performs a function, either cellular compartments (such as the nucleus, mitochondrion, or extracellular space) or stable macromolecular complexes (such as a ribosome or proteasome).</rdfs:comment>
+    <rdfs:label>Cellular Component</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellularLocation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/TelomeraseRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>a non-coding template RNA component of telomerase that directs telomere repeat synthesis at chromosome ends.</rdfs:comment>
+    <rdfs:label>Telomerase RNA component (TERC)</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000390"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SmoothER">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>An interconnected network of membrane-bound tubules lacking ribosomes, involved in lipid synthesis, detoxification, and calcium storage.</rdfs:comment>
+    <rdfs:label>smooth endoplasmic reticulum</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005790"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/organism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">organism</rdfs:label>
+    <rdfs:comment>Identifies the organism to which the entity belongs.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#organism"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Taxon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Increase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:comment>A relationship where one biological entity enhances, promotes, or elevates the activity, expression, or abundance of another.</rdfs:comment>
+    <rdfs:label>Increase</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_2237"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Peroxisome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A small, single-membrane-bound organelle containing enzymes for lipid metabolism and the detoxification of hydrogen peroxide.</rdfs:comment>
+    <rdfs:label>peroxisomes</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005777"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SmallInterferingRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding RNAs that induce  the degradation of complementary mRNA molecules through the RNA interference pathway.</rdfs:comment>
+    <rdfs:label>siRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000646"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Protein">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Protein element</rdfs:label>
+    <rdfs:comment>A physical entity consisting of a single polypeptide chain or protein monomer, defined by an amino acid sequence, describing a protein. Examples: EGFR (epidermal growth factor receptor), insulin.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Nea5621d8d9d74231a9c75855c10c0c31"/>
+    <rdfs:subClassOf rdf:nodeID="N8019ac59a911477484b1546716404287"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5119c98d8463410b9abf0cfceb096ffb">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N67f5ec5629d045c1acb3953cbf40c490"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Enhancement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A genetic relationship where combined mutations result in a stronger or more severe phenotype than expected.</rdfs:comment>
+    <rdfs:label>Enhancement</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_1131"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has source</rdfs:label>
+    <rdfs:comment>Identifies the original source from which the information was obtained, such as a URL, book, paper, database, or report.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/source"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Intron">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A non-coding segment within a gene that is removed during RNA splicing., Non-coding DNA spliced out during mRNA processing.</rdfs:comment>
+    <rdfs:label>Intron</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000188"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/pathwayComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">pathwayComponent</rdfs:label>
+    <rdfs:comment>The set of interactions and relationships  in the pathway/network.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#pathwayComponent"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdfs:range rdf:nodeID="N31b62ec5de4640abb0dece5476b1f82e"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/participatesInPathway"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Phosphorylation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A protein modification that effectively replaces a hydrogen atom with a phosphono group (H2PO3 or 'phosphate').</rdfs:comment>
+    <rdfs:label>Phosphorylation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MOD_00696"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/MessengerRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Encodes the genetic blueprint transcribed from DNA and delivers it to ribosomes for protein synthesis.</rdfs:comment>
+    <rdfs:label>mRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000234"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na03fee097cb74b4f9c49e46d63302120">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasType"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">BioNExt Ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">An ontology for representing biological entities, pathway participation, orthologous relationships, evidence, and cross-database integration for yeast and human biological models.
+</rdfs:comment>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://w3id.org/bionext/releases/v1.0.0/bionext.ttl"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-13</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-06</dct:modified>
+    <dct:creator rdf:resource="https://orcid.org/0009-0003-1344-2449"/>
+    <dct:publisher rdf:resource="https://s3bio.gitlab.io/"/>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-13</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Cytoskeleton">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A structural framework within the cytoplasm that includes actin filaments, microtubules, and intermediate filaments, essential for maintaining cell shape, intracellular transport, and signal transduction.</rdfs:comment>
+    <rdfs:label>cytoskeleton</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005856"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Dna">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Dna  element</rdfs:label>
+    <rdfs:comment>A physical entity consisting of deoxyribonucleotide monophosphates. Represents a pool of DNA molecules. Use DnaRegion for subregions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Nda28e89084ed4895ba7d59b9858c95c2"/>
+    <rdfs:subClassOf rdf:nodeID="N911cede110724dd6a5279c5075b185d7"/>
+    <rdfs:subClassOf rdf:nodeID="N565b8cd31a2b405cb4fcf7c4563309e4"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Dna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N721a44451a5a4e5a9fbf6b4973cd9eb8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRegion"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8fca68ecd0fe48a9acd1165c2a411fac">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N1d1f280c3a484f8abf9101575e9e3090"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/encodes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">encodes</rdfs:label>
+    <rdfs:comment>A relation between two objects, in which the first object contains information that is used to produce the second object.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/SIO_010078"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/encodedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RiboswitchRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>a noncoding RNA domains that are typically found embedded in messenger RNAs, where they sense specific target molecules or elemental ions and regulate gene expression</rdfs:comment>
+    <rdfs:label>RiboswitchRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000035"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Vesicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A small, membrane-enclosed sac within the cytoplasm, used to transport proteins, lipids, and other molecules between organelles or to the plasma membrane, playing a central role in exocytosis, endocytosis, and intracellular signaling pathways.</rdfs:comment>
+    <rdfs:label>Vesicle</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0031982"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasConfidenceScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has confidence score</rdfs:label>
+    <rdfs:comment>Score representing confidence in the annotation or relationship.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://w3id.org/biolink/vocab/ConfidenceLevel"/>
+    <rdfs:domain rdf:nodeID="Nd40e6c5a3fa44fc8848325179809d4f8"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/createdBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">created by</rdfs:label>
+    <rdfs:comment>Identifies the person, organization, software, or other agent responsible for creating or recording the information.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/annotates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">annotates</rdfs:label>
+    <rdfs:comment>Represents a relationship where a DNA region provides annotation, reference, or mapping to a gene, indicating functional, positional, or regulatory linkage. Commonly used to associate genomic features such as promoters or enhancers with their related genes.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Rna">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Rna  element</rdfs:label>
+    <rdfs:comment>A physical entity consisting of ribonucleotide monophosphates. Represents a pool of Rna molecules. Use RnaRegion for subregions. Examples: let-7 microRna, mRna, rRna.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="N04a04d12e6a34905b75854e8e84471c8"/>
+    <rdfs:subClassOf rdf:nodeID="N721a44451a5a4e5a9fbf6b4973cd9eb8"/>
+    <rdfs:subClassOf rdf:nodeID="Nac00fca1c388491e940cb651d86263a1"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Rna"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/participatesInPathway">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">participates in Pathway</rdfs:label>
+    <rdfs:comment>Relates a biological entity (e.g., gene, protein, metabolite, or complex) and biological interaction to a biological pathway in which it participates. This property indicates that the subject plays a role in the processes or interactions represented by the pathway, such as signaling, metabolic, or regulatory pathways.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N28018a98732d4c1cb88eba594787a941"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/participatesIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/YRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Involved in initiation of DNA replication and RNA quality control in conjunction with Ro60 protein.</rdfs:comment>
+    <rdfs:label>YRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000405"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3fda9ac35e340278a616d2509eabbaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasVariant"/>
+    <owl:allValuesFrom rdf:nodeID="N2b56590ff95e49f68b58b69cec8896b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SignalCrosstalk">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>A relationship where one signaling pathway influences another,</rdfs:comment>
+    <rdfs:label>Signal Crosstalk</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Cytoplasm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>The part of the cell contained within the entire plasma membrane, excluding the nucleus, and composed of the cytosol and all organelles except the nucleus and their contents.</rdfs:comment>
+    <rdfs:label>cytoplasm</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Ribosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A small, non-membrane-bound macromolecular complex composed of rRNA and proteins that synthesizes proteins by translating mRNA.</rdfs:comment>
+    <rdfs:label>ribosome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005840"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Methylation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>The process in which a methyl group is covalently attached to a molecule.</rdfs:comment>
+    <rdfs:label>Methylation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0032259"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb99b6cbb960c4fd88945c096abcaf7c6">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N3c028a1114824cc0aa55a640f46a81ff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N138f27b5bfc947e1904b53d34810b121">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N48c7392a33924e17a8d97ddfd72fe7f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CellularLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:label>Cellular location</rdfs:label>
+    <rdfs:comment>A controlled vocabulary class describing the location of a biological entity within or around a cell, based on standardized Gene Ontology cellular component terms. This includes subcellular compartments, macromolecular structures, and extracellular regions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#CellularLocationVocabulary"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2642db6547b540cbb510947a40432cc8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N184bb5845e1543a0864b904754cc8ae1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">length</rdfs:label>
+    <rdfs:comment>Specifies the number of nucleotides or residues in the feature.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/length"/>
+    <rdfs:domain rdf:nodeID="N3d99cb5684134eeca8fd3febec61d617"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfc89408944954e4b8a3131211e259ec4">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdf:rest rdf:nodeID="Nfabdeef96fa74f08bfb4826a8173ebd1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/TranscriptionTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdfs:comment>The process by which the genetic information stored in DNA is copied into a new molecule of messenger RNA (mRNA).</rdfs:comment>
+    <rdfs:label>Transcription to</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0009299"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasProvenance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has provenance</rdfs:label>
+    <rdfs:comment>Links an entity to provenance information describing the source, origin, collection, creation, or modification of the entity's data.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Dimerization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>A relationship that two proteins bind together to form a functional unit</rdfs:comment>
+    <rdfs:label>Dimerization</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0046983"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2374d458ea9040db8f6f5ffca3452d8b">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N875a603e782c4885b6a6fe334fe944d9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasOrthologGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has ortholog group</rdfs:label>
+    <rdfs:comment>Links an entity (e.g., a gene or protein) to the identifier of its ortholog group, representing a set of evolutionarily conserved homologs across species.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.org/net/orth#hasOrtholog"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f537811168b466ab9a0450f2b85ad44">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSmiles">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has SMILES</rdfs:label>
+    <rdfs:comment>Stores the SMILES (Simplified Molecular-Input Line-Entry System) notation.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_000020"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/NegativeCorrelation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CoExpression"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>The relationship that when one gene's expression goes up, the other's consistently goes down</rdfs:comment>
+    <rdfs:label>Negative Correlation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CoExpression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/LysosomalMembrane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>The lipid bilayer enclosing the lysosome, containing proteins essential for substance transport and maintaining acidic conditions required for lysosomal degradation.</rdfs:comment>
+    <rdfs:label>Lysosomal Membrane</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005765"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf98461ce34fb4821a94a490e2069c9e6">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="Nc294cf009dec4482a8df72a57b755365"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Ubiquitination">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>A relationship where one protein catalyzes the covalent addition of ubiquitin to another protein.</rdfs:comment>
+    <rdfs:label>Ubiquitination</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0016567"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Binding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:comment>A physical relationship where two or more entities interact via molecular binding (e.g., protein-protein, protein-DNA).</rdfs:comment>
+    <rdfs:label>Binding</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005488"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RegionType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:label>Region type</rdfs:label>
+    <rdfs:comment>A controlled vocabulary class describing a defined a classification of sequence regions, independent of whether they occur in DNA or RNA.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#SequenceRegionVocabulary"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/CellularLocation"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/VaultRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding small RNA associated with vault complexes; its exact biological function remains unclear.</rdfs:comment>
+    <rdfs:label>vtRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0002040"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasCasNum">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has CAS number</rdfs:label>
+    <rdfs:comment>the object has an identifier used by the Chemical Abstracts Service database.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_00044"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasNetCharge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has net charge</rdfs:label>
+    <rdfs:comment>The overall electrical charge of a chemical entity after considering all atoms and charged groups in the represented chemical structure.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/NuclearPoreComplex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A large protein complex that spans the nuclear envelope, regulating the bidirectional transport of molecules between the nucleus and cytoplasm.</rdfs:comment>
+    <rdfs:label>Nuclear Pore Complex</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005643"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f6d02614382408fab1ee975da397763">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasLeft"/>
+    <owl:someValuesFrom rdf:nodeID="N8268f410aef44336b7db3a8af75b716d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Nucleus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</rdfs:comment>
+    <rdfs:label>nucleus</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N403f678d32ad4eb9803ea93291fb3821">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N26b7abcc2c3a431dbd9c5c287d8aa1c2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has template</rdfs:label>
+    <rdfs:comment>Indicates that the subject entity is derived from or synthesized using the object entity as a template. For example, DNA is a template for RNA during transcription, or a gene is derived from a DNA sequence.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/annotates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/LongNonCodingRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding RNA regulates transcription, epigenetic modification, and mRNA splicing without encoding proteins.</rdfs:comment>
+    <rdfs:label>lncRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0001877"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c028a1114824cc0aa55a640f46a81ff">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CDS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>The portion of a gene's DNA or RNA that is translated into protein., Translated portion of exon that encodes protein.</rdfs:comment>
+    <rdfs:label>Coding Sequence (CDS)</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000316"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6cf3cee8d705460b82d132f2c7bdc214">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="Nf80ba439e4aa4db08ff123aca2d83ec1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasExternalId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has external identifier</rdfs:label>
+    <rdfs:comment>Associates an entity with an external database identifier that has been accepted as an equivalent identifier for the same entity. This property is used for entity integration and identifier normalization. In contrast to hasDbXref, which records source-provided cross-references without asserting equivalence, hasExternalId indicates that the linked identifier refers to the same integrated entity.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01df413cb62b4f85ab1ac514a5415215">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/GuideRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>a non-coding RNA that guides site-specific genome editing or RNA modification, e.g., in CRISPR or RNA editing complexes.</rdfs:comment>
+    <rdfs:label>gRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000602"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N715a29faf97f437597256a07a68ad5f9">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="Na60360d3a3cd410a9ea2e87d0c6742df"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Taxon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Organism</rdfs:label>
+    <rdfs:comment>A class for describing organism with scientific name at the species level or genus level, following binomial nomenclature (e.g., Homo sapiens, Escherichia coli).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasHGVS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has HGVS</rdfs:label>
+    <rdfs:comment>Associates a biological variant with its HGVS-compliant description. This property links a variant entity to a string or identifier that encodes its precise sequence alteration using the standardized nomenclature defined by the Human Genome Variation Society (HGVS).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/chromosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">chromosome</rdfs:label>
+    <rdfs:comment>Specifies the chromosome on which a gene or region is located.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://biohackathon.org/resource/faldo#location"/>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/variantType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">variant type</rdfs:label>
+    <rdfs:comment>Specifies the type of mutation represented by a biological variant. This property categorizes the variant according to the nature of the sequence alteration (e.g., substitution, deletion, insertion, duplication, inversion, or frameshift), enabling consistent classification and filtering of variants based on mutation type. The Range of this property should be ControlledVocabulary.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N37c4b4982d7843179fa3b935da485e38"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2284cdae420d4fb3a45a5e4c19e94331">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Dephosphorylation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>The process of removing one or more phosphoric (ester or anhydride) residues from a molecule.</rdfs:comment>
+    <rdfs:label>Dephosphorylation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0016311"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b8f927bab334dae861ff1e8eb0e065c">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="Ne9fc181b5772472c906aa6b04518661a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N29a7d2162c3446828cf25e4a713963a9">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasChemFormula">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has chemical formular</rdfs:label>
+    <rdfs:comment>Represents the molecular formula of a chemical compound.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_000042"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Promoter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A DNA region where RNA polymerase binds to initiate transcription., Initiates transcription by binding RNA polymerase.</rdfs:comment>
+    <rdfs:label>Promoter</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000167"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasLeft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has left</rdfs:label>
+    <rdfs:comment>The participants on the left side of relationship.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#left"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:range rdf:nodeID="N387b21fc061b4700a039aead5b917742"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CoExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdfs:comment>A relationship where two genes or proteins are expressed under similar conditions, implying potential co-regulation.</rdfs:comment>
+    <rdfs:label>Co-expression</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_2231"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28018a98732d4c1cb88eba594787a941">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N5342e96eb78a45f0af927ade5f853cfb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSeq">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has sequence</rdfs:label>
+    <rdfs:comment>Holds the nucleotide or amino acid sequence as a string.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.bioassayontology.org/bao#BAO_0002817"/>
+    <rdfs:domain rdf:nodeID="N115779c8e39045a2bf4eaa6f21f3fb29"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Inhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdfs:comment>A relationship where one entity reduces, blocks, or suppresses the activity or function of another (e.g. gene, protein).</rdfs:comment>
+    <rdfs:label>Inhibition</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/INO_0000124"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Nucleolus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A sub-nuclear body where ribosomal RNA is synthesized and ribosome assembly begins, serving as a critical node for protein biosynthesis.</rdfs:comment>
+    <rdfs:label>Nucleolus</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005730"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N911cede110724dd6a5279c5075b185d7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRegion"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/clusteringMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">clustering method</rdfs:label>
+    <rdfs:comment>Specifies the clustering algorithm used for grouping entities.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://w3id.org/biolink/vocab/supporting_study_method_type"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/UTR">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>Untranslated region affecting mRNA regulation., Untranslated regions at the 5' and 3' ends of mRNA that regulate translation and stability.</rdfs:comment>
+    <rdfs:label>UTR</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000203"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Glycosylation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>The covalent attachment and further modification of carbohydrate residues to a substrate molecule.</rdfs:comment>
+    <rdfs:label>Glycosylation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0070085"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CompoundMediatedStep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A derived network step representing one segment of a compound-mediated biological relationship. It does not by itself assert production, binding, activation, or inhibition.</rdfs:comment>
+    <rdfs:label>Compound-mediated step</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/publicationEvidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">publication evidence</rdfs:label>
+    <rdfs:comment>Provides a reference to supporting literature or data source.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/citation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N70f24608f5da46aeace5c48d680bdd2d">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N9a703a18dba046dfbac2fb61600bfba8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Exon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A DNA sequence that remains in the mature RNA and may encode protein., Part of gene retained in mature RNA; may include coding or UTR.</rdfs:comment>
+    <rdfs:label>Exon</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000147"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Silencer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A regulatory element that represses transcription of a gene., Prevents transcription of nearby gene sequences.</rdfs:comment>
+    <rdfs:label>Silencer</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000625"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e3be726edfa4e548f79ba95120b2df8">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N59413afbced34489a5e0d40088493d4f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/MultivesicularBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A type of late endosome characterized by internal vesicles formed by inward budding, involved in sorting membrane proteins for degradation.</rdfs:comment>
+    <rdfs:label>multivesicular bodies</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005771"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N173506c134994f9a9dd2c0f7b6cfe666">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbe58d7ebcd640b98ab298c008d1479a">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N26b7abcc2c3a431dbd9c5c287d8aa1c2">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="Nc273f09b3c6e4c6c959315c283c41dd0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/expectedParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label xml:lang="en">expected participant</rdfs:label>
+    <rdfs:comment>Non-logical metadata listing an allowed participant class for a relationship type; multiple values represent alternatives.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N184bb5845e1543a0864b904754cc8ae1">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="N7737f2b61c524dc592491cd81bb3ce8a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Endosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A membrane-bound vesicular structure involved in the internalization and sorting of materials taken up by endocytosis, forming an intermediate compartment between the plasma membrane and lysosomes.</rdfs:comment>
+    <rdfs:label>Endosome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005768"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Vacuole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A membrane-bound organelle prominent in plant and fungal cells, involved in storage, degradation, and maintaining turgor pressure.</rdfs:comment>
+    <rdfs:label>vacuole</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005773"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Activation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdfs:comment>A relationship where one entity increases or initiates the activity or function of another (e.g., gene, protein).</rdfs:comment>
+    <rdfs:label>Activation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/INO_0000024"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1a9fd95ce3ee4555b0eee89d3fdba70e">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N2faa649a8d6340ddb7f3915d7ff9f03e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasDbXref">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has database cross reference</rdfs:label>
+    <rdfs:comment>Indicates a cross-reference to an external database that provides additional information about the entity.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ThreePrimeUTR">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/UTR"/>
+    <rdfs:comment>3′ region that affects stability and localization of mRNA., The 3' untranslated region downstream of the coding sequence in mRNA.</rdfs:comment>
+    <rdfs:label>3' UTR</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000205"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/UTR"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/synonyms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">synonyms</rdfs:label>
+    <rdfs:comment>Alternative names or labels for the same entity.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Terminator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A DNA sequence that signals the end of transcription., Marks the end of transcription by RNA polymerase.</rdfs:comment>
+    <rdfs:label>Terminator</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000141"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/NodeEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Node entity</rdfs:label>
+    <rdfs:comment>A biological entity representing a pool of molecules or complexes functioning as nodes in pathway models. A NodeEntity is defined by a canonical sequence or structural reference and is annotated with descriptive features, including cellular location, naming conventions, and literature evidence.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0fdea4dfc89349d09764b041e2708fb7">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Translation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdfs:comment>The process by which a cell's machinery reads the genetic information on an mRNA molecule and synthesizes a protein from it.</rdfs:comment>
+    <rdfs:label>Translation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0006412"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e3c5d7baba24fd3a5ffe6966c5e794e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasHGVS"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Apoptosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A multi-protein complex that forms in the cytoplasm during apoptosis and activates initiator caspases to trigger programmed cell death.</rdfs:comment>
+    <rdfs:label>apoptosome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0043293"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc7fe46887f3849719f46ffefca4245b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRight"/>
+    <owl:allValuesFrom rdf:nodeID="N8cb6fa6ca24e43be9e65e870afc03152"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbe9d67f454b446b3b4663d950c97fe20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasHGVS"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/cellularLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cellular location</rdfs:label>
+    <rdfs:comment>Represents the cellular location or localization.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#cellularLocation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/CellularLocation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf3491e3f263d4ede983aba52e966ec97">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="Nb99b6cbb960c4fd88945c096abcaf7c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/expectedRight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label xml:lang="en">expected right participant type</rdfs:label>
+    <rdfs:comment>Non-logical metadata listing an allowed right-participant class for a relationship type; multiple values represent alternatives.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/expectedParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Indirect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>The relationship is known to occur through one or more intermediate biological steps that are not explicitly resolved.</rdfs:comment>
+    <rdfs:label>Indirect</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_2286"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasInChIKey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has InChI Key</rdfs:label>
+    <rdfs:comment>Stores the hashed InChIKey version of the chemical identifier.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_000059"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N31b62ec5de4640abb0dece5476b1f82e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Na005a12ff2ee47d3935eab2e99bd5f0b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RnaRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+    <rdfs:label>Rna region</rdfs:label>
+    <rdfs:comment>A controlled vocabulary class describing a defined subregion of an RNA molecule. An RnaRegion is not a pool of discrete molecular entities but a dependent segment that exists only as part of a larger RNA molecule and is defined by its positional or functional context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N48c7392a33924e17a8d97ddfd72fe7f6">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N20da1e4b5a4a49b88f4462eee07eb7e1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasModificationSitedOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has modification sited on</rdfs:label>
+    <rdfs:comment>Specifies the amino acid residue and position where the protein is modified, expressed in text (e.g., 'Ser473', Ser473-phosphorylation”, “Lys9Ac"). The RDF object represented as an RDF resource identified by the protein accession and modification site (e.g., 'UniProt:P31749_Ser473', 'UniProt:P68431_Lys9Ac')</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N0df973cbf5a74dd1aaffc714ef344276"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SevenSKRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>7SK is a highly conserved noncoding RNA of 331 nucleotides in animals. It  regulates transcription elongation by sequestering the positive transcription elongation factor b (P-TEFb).</rdfs:comment>
+    <rdfs:label>7SK small nuclear RNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0002340"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/NoInteraction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A relationship where the combined effect of two mutations shows no significant difference from their individual effects.</rdfs:comment>
+    <rdfs:label>No interaction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_2226"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/MissingInteraction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>An interaction expected in the reference pathway but absent, e.g. because of mutation.</rdfs:comment>
+    <rdfs:label>Missing interaction</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_0573"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ec4c91578654ef9a0ad7512c31b14a6">
+    <rdf:first rdf:nodeID="Nbe9d67f454b446b3b4663d950c97fe20"/>
+    <rdf:rest rdf:nodeID="N2290c50e7c4d4093be691bcf3085f72b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N64ddf2f3eeae451da626eb81eae4ec71">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="N5e47e572420e4f25ad82ccd56163e8fc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N13d039393fe84db7aef4ed9f6c9370e6">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="Nf98461ce34fb4821a94a490e2069c9e6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PrecursorMiRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Hairpin-shaped RNA processed in the nucleus and cytoplasm to produce mature microRNAs.</rdfs:comment>
+    <rdfs:label>pre-miRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000185"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/SuccessiveReaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A relationship between catalytic entities whose biochemical reactions occur successively and are connected through a shared intermediate compound.</rdfs:comment>
+    <rdfs:label>Successive reaction relationship</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c765e84984449b5b711cb90f13a57c7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N4ec4c91578654ef9a0ad7512c31b14a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RibosomalRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>Forms the catalytic and structural core of ribosomes, facilitating peptide bond formation.</rdfs:comment>
+    <rdfs:label>rRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000252"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/participatesInEdge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">participates in Edge</rdfs:label>
+    <rdfs:comment>Relates an entity (e.g., gene, protein, or small molecule) to a specific interaction or relationship instance (edge) in which it participates. This property is used to associate biological entities with edges in a graph model, enabling representation of their roles within interactions such as binding, regulation, or signaling.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/participatesIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na005a12ff2ee47d3935eab2e99bd5f0b">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="Nd5ee2e895d9a4246bce9ab25437197b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Reaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Reaction</rdfs:label>
+    <rdfs:comment>An occurrent entity representing a sequence of biochemical or cellular events that transforms input entities (substrates) into output entities (products), often mediated by enzymatic or regulatory mechanisms.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:subClassOf rdf:nodeID="Nfcb4b87721d940498fb154e20d41a583"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#BiochemicalReaction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Interaction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Influence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RoughER">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>A series of flattened membrane sacs studded with ribosomes, primarily responsible for the synthesis and initial folding of membrane-bound and secretory proteins.</rdfs:comment>
+    <rdfs:label>rough endoplasmic reticulum</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005791"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N12068c960c3c47d794691a149ebe2ea2">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PlasmaMembrane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>a dynamic, semi-permeable phospholipid bilayer containing embedded proteins and carbohydrates. It defines the cell boundary and regulates the transport of substances in and out of the cell.</rdfs:comment>
+    <rdfs:label>plasma membrane</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/DnaRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+    <rdfs:label>Dna region</rdfs:label>
+    <rdfs:comment>A controlled vocabulary class describing a defined subregion of a DNA molecule. A DNARegion is not a pool of discrete molecular entities but a contextual segment that exists only as part of a larger DNA molecule and is defined by its relative position or functional role.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RegionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasInChI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has InChI</rdfs:label>
+    <rdfs:comment>Stores the IUPAC International Chemical Identifier (InChI).</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://semanticscience.org/resource/CHEMINF_000038"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/SmallMolecule"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdfs:comment>the human-readable name of entity.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/name"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne038d241d06a4f849b25d31722bedcd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nf185d8fedaed464094232bbfb2a39a5b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has member</rdfs:label>
+    <rdfs:comment>Specifies members that are part of a group or collection.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <rdfs:range rdf:nodeID="N403f678d32ad4eb9803ea93291fb3821"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/CircularRNA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdfs:comment>A non-coding single-stranded RNAs, covalently closed RNA with regulatory function.</rdfs:comment>
+    <rdfs:label>circRNA</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0002291"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PathwayModule">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Pathway module</rdfs:label>
+    <rdfs:comment>a set of molecular interactions, reactions, or sub-processes serving a specific biological role that groups together related interactions, reactions, or sub-processes serving a specific biological role.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+    <rdfs:subClassOf rdf:nodeID="N0082b83339de4e6097a349aebf7fc491"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Pathway"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a260d63177c49c593654b8a1e8c9d02">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasType"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5342e96eb78a45f0af927ade5f853cfb">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="N774f74110b1042668fd1a4ff45e49429"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has type</rdfs:label>
+    <rdfs:comment>The relationship or interaction type of the EdgeEntity class.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#interactionType"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSubcomplex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has subcomplex</rdfs:label>
+    <rdfs:comment>Relates a biological complex to a subcomplex that serves as one of its components.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc8f49845ec4443e2885a4c9eb9768388">
+    <rdf:first rdf:nodeID="Na85560537ecb488faf3e1a42f0b48ed5"/>
+    <rdf:rest rdf:nodeID="Ndbe58d7ebcd640b98ab298c008d1479a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67f5ec5629d045c1acb3953cbf40c490">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="N198ee2fc23464bb283bb0ffc14259607"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has region</rdfs:label>
+    <rdfs:comment>Identifies a specific region within a gene, genome, or molecule.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://biohackathon.org/resource/faldo#Region"/>
+    <rdfs:domain rdf:nodeID="Neb10d5f5511f4f5a8266f7f652458954"/>
+    <rdfs:range rdf:nodeID="N094c5b5b41454817b731b886b3217150"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N079e626905c34e8790c599b80e42b4e1">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="Nc3dd31de4d8b4eb48cf45423f75d67e0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/memberOfComplex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">member of Complex</rdfs:label>
+    <rdfs:comment>Relates a biological entity (e.g., protein, RNA, or other molecule) to a molecular complex of which it is a constituent member. This property indicates that the subject participates as a component of the specified complex, contributing to its structure and/or function.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/bionext/ontology/hasSubunit"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/participatesIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSpeciesCoverage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has species coverage</rdfs:label>
+    <rdfs:comment>A set of species that related to the domain</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/Taxon"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0df973cbf5a74dd1aaffc714ef344276">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Naca642d419fb42879650b7d3e85b4e78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Decrease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:comment>A relationship where one biological entity reduces, inhibits, or diminishes the activity, expression, or abundance of another.</rdfs:comment>
+    <rdfs:label>Decrease</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_2242"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Suppression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A genetic relationship where a mutation in one gene compensates for or rescues the phenotype of a mutation in another gene.</rdfs:comment>
+    <rdfs:label>Suppression</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/MI_1130"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/StateTransition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <rdfs:comment>A biological event in which the same biological entity changes its state without becoming a different entity. The change may involve its location or membrane orientation, conformation or molecular modification state, or functional activity.</rdfs:comment>
+    <rdfs:label>State transition</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Insulator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>A DNA element that blocks interactions between enhancers and unrelated promoters., Defines regulatory boundaries between domains.</rdfs:comment>
+    <rdfs:label>Insulator</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000627"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/modificationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">modification type</rdfs:label>
+    <rdfs:comment>Specifies the type of modification represented by a biological entity. This property categorizes the nature of a change or alteration (e.g., chemical modification, structural modification, or sequence alteration), providing a broader classification than mutation-specific terms and allowing description of both genetic and non-genetic modifications.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nb51234fa7c2c41d78fbe23579c96d374"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/ControlledVocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/modifiedDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">modified date</rdfs:label>
+    <rdfs:comment>Records the date and time when the information was most recently modified.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfcb4b87721d940498fb154e20d41a583">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRight"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/derivedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">derived from</rdfs:label>
+    <rdfs:comment>Identifies another resource, dataset, or information item from which the current information was derived.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Provenance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasWeight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has weight</rdfs:label>
+    <rdfs:comment>Indicates the significance value assigned to an edge or interaction, representing its relative strength, reliability, or importance within a network. Typically expressed as a floating-point number.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbeecbf7762d4c19aa468e977a32cb84">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="Nf3491e3f263d4ede983aba52e966ec97"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/startPos">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">start position</rdfs:label>
+    <rdfs:comment>Relates a sequence feature to an object that represents its start coordinate on a reference sequence.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0002516"/>
+    <rdfs:seeAlso rdf:resource="http://biohackathon.org/resource/faldo#begin"/>
+    <rdfs:domain rdf:nodeID="N138f27b5bfc947e1904b53d34810b121"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neaca3a427f2c4549ba5374d9685e6104">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="N4b8f927bab334dae861ff1e8eb0e065c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/RegulateExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <bn:expectedLeft rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <bn:expectedRight rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdfs:comment>A relationship indicating that one entity promotes or is responsible for the gene expression of another.</rdfs:comment>
+    <rdfs:label>Regulates xpression</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/RelationshipType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N115779c8e39045a2bf4eaa6f21f3fb29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N82d0edc09a2349cc9c77e92d4383d565"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Mitochondria">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>the double-membraned organelles with an outer membrane and a highly folded inner membrane forming cristae, enclosing a protein-rich matrix. Their elongated shape and internal complexity reflect their role in ATP production through aerobic respiration.</rdfs:comment>
+    <rdfs:label>mitochondria</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005739"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5ee2e895d9a4246bce9ab25437197b3">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="N0259cf2c37c8431b91a354b8325ac163"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b56590ff95e49f68b58b69cec8896b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N1116925da2694e3d90a088f377d7bb06"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfabdeef96fa74f08bfb4826a8173ebd1">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/RnaRegion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/endPos">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">end position</rdfs:label>
+    <rdfs:comment>Relates a sequence feature to an object that represents its end coordinate on a reference sequence.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0002518"/>
+    <rdfs:seeAlso rdf:resource="http://biohackathon.org/resource/faldo#end"/>
+    <rdfs:domain rdf:nodeID="Nc2ea3a53cd5d431da73f050ee911b520"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd4c6c69aaa746408c967bace77e841b">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasSubunit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has subunit</rdfs:label>
+    <rdfs:comment>Relates a biological complex to a subunit  that serves as a monomer  of its components .</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#component"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Complex"/>
+    <rdfs:range rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77f51a65febc4e4f92cd01e222a5cb9f">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/Lysosome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>the spherical, membrane-bound organelles containing hydrolytic enzymes active at low pH. They function as the digestive system of the cell, breaking down waste, macromolecules, and cellular debris.</rdfs:comment>
+    <rdfs:label>lysosome</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005764"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/ControlledVocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Contolled vocabulary</rdfs:label>
+    <rdfs:comment>A class representing a controlled and managed vocabulary of terms used for the consistent annotation and integration of biological data. It encompasses both locally defined terms and externally sourced ontology classes that are incorporated to enable interoperability across systems.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#ControlledVocabulary"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/bionext/ontology/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f1407f6edef4388b40519cceb8a09d0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRight"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf49115502f504902bb256f319a4079ca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRight"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5d8c4ff08b649029db65c96271eb513">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N173506c134994f9a9dd2c0f7b6cfe666"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5439aaeeaa243b88540570717ad8d2e">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac00fca1c388491e940cb651d86263a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/isVariantOf"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N04a04d12e6a34905b75854e8e84471c8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasVariant"/>
+    <owl:allValuesFrom rdf:nodeID="Ne571436b8fd34360bf33f2c6ce854c56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91b7687dc3644245abd772ef8fee6993">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nbbeecbf7762d4c19aa468e977a32cb84"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N82d0edc09a2349cc9c77e92d4383d565">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:nodeID="N5e3be726edfa4e548f79ba95120b2df8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6dfda66f765748f4bee540089442e154">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="Na5439aaeeaa243b88540570717ad8d2e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbf0c324019cd44b391a6926a568171a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N70f24608f5da46aeace5c48d680bdd2d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2faa649a8d6340ddb7f3915d7ff9f03e">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8268f410aef44336b7db3a8af75b716d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N3e73649ac79545ccb319865cf290dc12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N104972302eb242019afcafdea6707dbc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N079e626905c34e8790c599b80e42b4e1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N070ac0102de543b5ae2d80493c676a0f">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="Ndd4c6c69aaa746408c967bace77e841b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc273f09b3c6e4c6c959315c283c41dd0">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N829e89d995cb4109a9df9db958f9c1bc">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="N070ac0102de543b5ae2d80493c676a0f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/PolyATail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+    <rdfs:comment>Post-transcriptional feature stabilizing mRNA.</rdfs:comment>
+    <rdfs:label>Poly-A Tail</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SO_0000553"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2290c50e7c4d4093be691bcf3085f72b">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Dna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9fc181b5772472c906aa6b04518661a">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/expectedLeft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label xml:lang="en">expected left participant type</rdfs:label>
+    <rdfs:comment>Non-logical metadata listing an allowed left-participant class for a relationship type; multiple values represent alternatives.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bionext/ontology/expectedParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e73649ac79545ccb319865cf290dc12">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+    <rdf:rest rdf:nodeID="Nba00cb686a70406893c62852099fba04"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59413afbced34489a5e0d40088493d4f">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N774f74110b1042668fd1a4ff45e49429">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="N7f537811168b466ab9a0450f2b85ad44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na60360d3a3cd410a9ea2e87d0c6742df">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/OrthologGroup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/GolgiBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+    <rdfs:comment>the membrane-bound organelle found in eukaryotic cells, known for its role in modifying, sorting, and packaging proteins and lipids. Morphologically, it has a very distinctive and organized structure.</rdfs:comment>
+    <rdfs:label>golgi apparatus, golgi body, golgi complex</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0005794"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bionext/ontology/CellComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc3dd31de4d8b4eb48cf45423f75d67e0">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="N6dfda66f765748f4bee540089442e154"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0082b83339de4e6097a349aebf7fc491">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/pathwayComponent"/>
+    <owl:allValuesFrom rdf:nodeID="N2b304e42ce0c4efea0772cbe376a77bd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N198ee2fc23464bb283bb0ffc14259607">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N77f51a65febc4e4f92cd01e222a5cb9f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nda28e89084ed4895ba7d59b9858c95c2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasVariant"/>
+    <owl:allValuesFrom rdf:nodeID="N7c765e84984449b5b711cb90f13a57c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc2ea3a53cd5d431da73f050ee911b520">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N6cf3cee8d705460b82d132f2c7bdc214"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a703a18dba046dfbac2fb61600bfba8">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="N1a9fd95ce3ee4555b0eee89d3fdba70e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1116925da2694e3d90a088f377d7bb06">
+    <rdf:first rdf:nodeID="Nc63803b00ddf43b3932653aacbf0a4e1"/>
+    <rdf:rest rdf:nodeID="N0fdea4dfc89349d09764b041e2708fb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasEcNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has EC number</rdfs:label>
+    <rdfs:comment>Links a biochemical reaction to the Enzyme Commission classification corresponding to the enzymatic activity that catalyzes the reaction.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#eCNumber"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/Reaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/participatesIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">participates in</rdfs:label>
+    <rdfs:comment>Denotes a reaction, pathway, or complex in which the entity participates.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N387b21fc061b4700a039aead5b917742">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Neaca3a427f2c4549ba5374d9685e6104"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc63803b00ddf43b3932653aacbf0a4e1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasHGVS"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf185d8fedaed464094232bbfb2a39a5b">
+    <rdf:first rdf:nodeID="N5e3c5d7baba24fd3a5ffe6966c5e794e"/>
+    <rdf:rest rdf:nodeID="N29a7d2162c3446828cf25e4a713963a9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d1f280c3a484f8abf9101575e9e3090">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Gene"/>
+    <rdf:rest rdf:nodeID="N94e9fbcf6dde462ea7ec748ff14d6c00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bionext/ontology/hasRight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has right</rdfs:label>
+    <rdfs:comment>The participants on the right side of relationship.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.biopax.org/release/biopax-level3.owl#right"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bionext/ontology/EdgeEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea5621d8d9d74231a9c75855c10c0c31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasVariant"/>
+    <owl:allValuesFrom rdf:nodeID="Ne038d241d06a4f849b25d31722bedcd4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8019ac59a911477484b1546716404287">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/isVariantOf"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N37c4b4982d7843179fa3b935da485e38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N5119c98d8463410b9abf0cfceb096ffb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e47e572420e4f25ad82ccd56163e8fc">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="N2284cdae420d4fb3a45a5e4c19e94331"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b304e42ce0c4efea0772cbe376a77bd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N64ddf2f3eeae451da626eb81eae4ec71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nba00cb686a70406893c62852099fba04">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/NodeEntity"/>
+    <rdf:rest rdf:nodeID="N12068c960c3c47d794691a149ebe2ea2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N20da1e4b5a4a49b88f4462eee07eb7e1">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neb10d5f5511f4f5a8266f7f652458954">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N13d039393fe84db7aef4ed9f6c9370e6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0c1bd31323a42b78d523c45c204a533">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/bionext/ontology/hasRegion"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/bionext/ontology/DnaRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N094c5b5b41454817b731b886b3217150">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfc89408944954e4b8a3131211e259ec4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N803b0610f67a477d83e2094949092cbf">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/PathwayModule"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://s3bio.gitlab.io/">
+    <rdfs:label xml:lang="en">S3Bio Lab</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc294cf009dec4482a8df72a57b755365">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Rna"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N94e9fbcf6dde462ea7ec748ff14d6c00">
+    <rdf:first rdf:resource="https://w3id.org/bionext/ontology/Protein"/>
+    <rdf:rest rdf:nodeID="N01df413cb62b4f85ab1ac514a5415215"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orcid.org/0009-0003-1344-2449">
+    <rdfs:label xml:lang="en">Nutticha Silakom</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8cb6fa6ca24e43be9e65e870afc03152">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N829e89d995cb4109a9df9db958f9c1bc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d99cb5684134eeca8fd3febec61d617">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N2374d458ea9040db8f6f5ffca3452d8b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N230eb60326eb4fd48653212eaecd497a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N8fca68ecd0fe48a9acd1165c2a411fac"/>
+  </rdf:Description>
+</rdf:RDF>
