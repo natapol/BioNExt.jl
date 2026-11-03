@@ -185,3 +185,9 @@ julia --project=. docs/generate_reference.jl                      # refresh the 
 ```
 
 See [Maintaining and extending](docs/src/manual/09-maintenance.md) for the full procedure.
+
+## License
+
+The package code is under the MIT license (see [LICENSE](LICENSE)). The ontology files in
+[`ontology/`](ontology) are the BioNExt Ontology 1.0.0, under CC BY 4.0; see
+[ontology/README.md](ontology/README.md) for attribution.
