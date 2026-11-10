@@ -8,11 +8,11 @@ Only depends on the `Dates` standard library.
 
 ## Installation
 
-BioNExt.jl needs Julia 1.10 or newer. It isn't registered yet, so add it from GitHub:
+BioNExt.jl needs Julia 1.10 or newer. It is in Julia's General registry:
 
 ```julia
 using Pkg
-Pkg.add(url = "https://github.com/natapol/BioNExt.jl")
+Pkg.add("BioNExt")
 ```
 
 To import data from UniProt, KEGG, IntAct, BioGRID, SIGNOR, Reactome and BioCyc, see the companion

@@ -4,10 +4,10 @@
 
 BioNExt.jl needs Julia 1.10 or newer. It has no dependencies outside the standard library.
 
-The package isn't registered yet. Add it from GitHub:
+The package is in Julia's General registry:
 
 ```
-pkg> add https://github.com/natapol/BioNExt.jl
+pkg> add BioNExt
 ```
 
 To work on the package itself, clone it and start Julia in its folder:
